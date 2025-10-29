@@ -1,0 +1,165 @@
+---
+title: "Zona de pruebas"
+description: "Permite que los usuarios interactúen con tu API"
+---
+
+<div id="overview">
+  ## Descripción general
+</div>
+
+El área de pruebas de la API es un entorno interactivo que permite a los usuarios probar y explorar tus endpoints de API. Los desarrolladores pueden elaborar solicitudes a la API, enviarlas y ver las respuestas sin salir de tu documentación.
+
+<Frame>
+  <img src="/images/playground/API-playground-light.png" alt="Área de pruebas de la API para el endpoint que desencadena una actualización." className="block dark:hidden" />
+
+  <img src="/images/playground/API-playground-dark.png" alt="Área de pruebas de la API para el endpoint que desencadena una actualización." className="hidden dark:block" />
+</Frame>
+
+El área de pruebas se genera automáticamente a partir de tu especificación de OpenAPI o del esquema de AsyncAPI, por lo que cualquier actualización de tu API se refleja automáticamente en el área de pruebas. También puedes crear manualmente páginas de referencia de la API después de definir una URL base y un método de Autenticación en tu `docs.json`.
+
+Recomendamos generar tu área de pruebas de la API a partir de una especificación de OpenAPI. Consulta [OpenAPI Setup](/es/api-playground/openapi-setup) para obtener más información sobre cómo crear tu documento de OpenAPI.
+
+<div id="getting-started">
+  ## Primeros pasos
+</div>
+
+<Steps>
+  <Step title="Añade tu archivo de especificación OpenAPI.">
+    <Info>
+      Asegúrate de que tu archivo de especificación OpenAPI sea válido usando el [Swagger Editor](https://editor.swagger.io/) o la [CLI de Mint](https://www.npmjs.com/package/mint).
+    </Info>
+
+    ```bash {3}
+    /your-project
+      |- docs.json
+      |- openapi.json
+    ```
+  </Step>
+
+  <Step title="Configura `docs.json`.">
+    Actualiza tu `docs.json` para hacer referencia a tu especificación OpenAPI. Añade una propiedad `openapi` a cualquier elemento de navigation para completar automáticamente tu documentación con páginas para cada endpoint especificado en tu documento OpenAPI.
+
+    Este ejemplo genera una página para cada endpoint especificado en `openapi.json` y las organiza en el grupo &quot;API reference&quot; dentro de tu navigation.
+
+    ```json
+    "navigation": {
+      "groups": [
+        {
+          "group": "API reference",
+          "openapi": "openapi.json"
+        }
+      ]
+    }
+    ```
+
+    Para generar páginas solo para endpoints específicos, enumera los endpoints en la propiedad `pages` del elemento de navigation.
+
+    Este ejemplo genera páginas solo para los endpoints `GET /users` y `POST /users`. Para generar páginas de otros endpoints, añade endpoints adicionales al arreglo `pages`.
+
+    ```json
+    "navigation": {
+      "groups": [
+          {
+            "group": "API reference",
+            "openapi": "openapi.json",
+            "pages": [
+              "GET /users",
+              "POST /users"
+            ]
+          }
+      ]
+    }
+    ```
+  </Step>
+</Steps>
+
+<div id="customizing-your-playground">
+  ## Personaliza tu área de pruebas
+</div>
+
+Puedes personalizar tu área de pruebas de la API definiendo las siguientes propiedades en tu `docs.json`.
+
+<ResponseField name="playground" type="object">
+  Configuración del área de pruebas de la API.
+
+  <Expandable title="playground" defaultOpen="True">
+    <ResponseField name="display" type="&#x22;interactive&#x22; | &#x22;simple&#x22; | &#x22;none&#x22;">
+      Modo de visualización del área de pruebas de la API.
+
+      * `"interactive"`: Muestra el área de pruebas interactiva.
+      * `"simple"`: Muestra un endpoint copiable sin área de pruebas.
+      * `"none"`: No muestra nada.
+
+      El valor predeterminado es `interactive`.
+    </ResponseField>
+
+    <ResponseField name="proxy" type="boolean" defaultOpen="True">
+      Indica si se deben pasar las solicitudes de la API a través de un servidor proxy. De manera predeterminada es `true`.
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="examples" type="object">
+  Configuración de los ejemplos de API generados automáticamente.
+
+  <Expandable title="examples" defaultOpen="True">
+    <ResponseField name="languages" type="array of string">
+      Idiomas para los fragmentos de API generados automáticamente.
+
+      Los idiomas se muestran en el orden especificado.
+    </ResponseField>
+
+    <ResponseField name="defaults" type="&#x22;required&#x22; | &#x22;all&#x22;">
+      Indica si se deben mostrar los parámetros opcionales en los ejemplos de la API. De manera predeterminada es `all`.
+    </ResponseField>
+
+    <ResponseField name="prefill" type="boolean">
+      Indica si se debe rellenar previamente el área de pruebas de la API con datos de ejemplos del esquema. Cuando está activado, el área de pruebas completa automáticamente los campos de la solicitud con valores de ejemplo de tu especificación de OpenAPI. De manera predeterminada es `false`.
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<div id="example-configuration">
+  ### Ejemplo de configuración
+</div>
+
+```json
+{
+ "api": {
+   "playground": {
+     "display": "interactive"
+   },
+   "examples": {
+     "languages": ["curl", "python", "javascript"],
+     "defaults": "required",
+     "prefill": true
+   }
+ }
+}
+```
+
+Este ejemplo configura el área de pruebas de la API para que sea interactiva, con fragmentos de código de ejemplo para cURL, Python y JavaScript. En los fragmentos de código solo se muestran los parámetros obligatorios, y el área de pruebas rellena previamente el cuerpo de la solicitud con valores de ejemplo.
+
+<div id="custom-endpoint-pages">
+  ### Páginas de endpoints personalizadas
+</div>
+
+Cuando necesites más control sobre tu documentación de API, usa la extensión `x-mint` en tu especificación de OpenAPI o crea páginas `MDX` individuales para tus endpoints.
+
+Ambas opciones te permiten:
+
+* Personalizar los metadatos de la página
+* Añadir contenido adicional, como ejemplos
+* Controlar el comportamiento del playground por página
+
+Se recomienda la extensión `x-mint` para que toda tu documentación de API se genere automáticamente a partir de tu especificación de OpenAPI y se mantenga en un solo archivo.
+
+Se recomiendan las páginas `MDX` individuales para APIs pequeñas o cuando quieras probar cambios por página.
+
+Para más información, consulta [Extensión x-mint](/es/api-playground/openapi-setup#x-mint-extension) y [Configuración de MDX](/es/api-playground/mdx/configuration).
+
+<div id="further-reading">
+  ## Lecturas adicionales
+</div>
+
+* [Configuración de AsyncAPI](/es/api-playground/asyncapi/setup) para obtener más información sobre cómo crear tu esquema de AsyncAPI y generar páginas de referencia de WebSocket.

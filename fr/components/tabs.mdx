@@ -1,0 +1,74 @@
+---
+title: "Tabs"
+description: "Basculer entre des contenus avec le composant Tabs"
+---
+
+Utilisez des onglets pour organiser le contenu en plusieurs panneaux entre lesquels les utilisateurs peuvent passer. Vous pouvez ajouter autant d’onglets que nécessaire et inclure d’autres composants dans chaque onglet.
+
+<Tabs>
+  <Tab title="First tab">
+    ☝️ Bienvenue dans le contenu visible uniquement dans le premier onglet.
+
+    Vous pouvez ajouter autant de composants que vous le souhaitez à l’intérieur des onglets. Par exemple, un code block :
+
+    ```java HelloWorld.java
+      class HelloWorld {
+          public static void main(String[] args) {
+              System.out.println("Hello, World!");
+          }
+      }
+    ```
+  </Tab>
+
+  <Tab title="Second tab" icon="leaf">
+    ✌️ Voici du contenu présent uniquement dans le deuxième onglet.
+
+    Celui-ci a une icône <Icon icon="leaf" /> !
+  </Tab>
+
+  <Tab title="Third tab">
+    💪 Voici du contenu présent uniquement dans le troisième onglet.
+  </Tab>
+</Tabs>
+
+````mdx Tabs example
+<Tabs>
+  <Tab title="Premier onglet">
+    ☝️ Bienvenue dans le contenu que vous ne pouvez voir que dans le premier onglet.
+
+    Vous pouvez ajouter n'importe quel nombre de composants à l'intérieur des onglets. Par exemple, un bloc de code :
+    ```java HelloWorld.java
+      class HelloWorld {
+          public static void main(String[] args) {
+              System.out.println("Bonjour le monde !");
+          }
+      }
+    ```
+  </Tab>
+  <Tab title="Deuxième onglet" icon="leaf">
+    ✌️ Voici le contenu qui se trouve uniquement dans le deuxième onglet.
+
+    Celui-ci a une icône <Icon icon="leaf" /> !
+  </Tab>
+  <Tab title="Troisième onglet">
+    💪 Voici le contenu qui se trouve uniquement dans le troisième onglet.
+  </Tab>
+</Tabs>
+````
+
+
+<div id="properties">
+  ## Propriétés
+</div>
+
+<ResponseField name="title" type="string" required>
+  Le titre de l’onglet. Des titres courts facilitent la navigation.
+</ResponseField>
+
+<ResponseField name="icon" type="string">
+  Une icône [Font Awesome](https://fontawesome.com/icons), une icône [Lucide](https://lucide.dev/icons), une URL d’icône ou un chemin relatif vers une icône.
+</ResponseField>
+
+<ResponseField name="iconType" type="string">
+  Pour les icônes Font Awesome uniquement : l’un de `regular`, `solid`, `light`, `thin`, `sharp-solid`, `duotone`, `brands`.
+</ResponseField>

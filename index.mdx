@@ -1,97 +1,74 @@
 ---
 title: "Introduction"
-description: "Welcome to the new home for your documentation"
+description: "Meet the next generation of documentation. AI-native, beautiful out-of-the-box, and built for developers."
+mode: "frame"
 ---
 
-## Setting up
+export const HeroCard = ({ filename, title, description, href }) => {
+  return (
+    <a className="group cursor-pointer pb-8" href={href}>
+      <img
+        src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}.png`}
+        className="block dark:hidden pointer-events-none group-hover:scale-105 transition-all duration-100"
+      />
+      <img
+        src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}-dark.png`}
+        className="pointer-events-none group-hover:scale-105 transition-all duration-100 hidden dark:block"
+      />
+      <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
+        {title}
+      </h3>
+      <span className="mt-1.5">{description}</span>
+    </a>
+  );
+};
 
-Get your documentation site up and running in minutes.
+<div className="relative">
+  <div className="absolute top-0 left-0 right-0">
+    <img
+      src="/images/hero/background-light.png"
+      className="block dark:hidden pointer-events-none"
+      alt="Decorative background image."
+    />
+    <img
+      src="/images/hero/background-dark.png"
+      className="hidden dark:block pointer-events-none"
+      alt="Decorative background image."
+    />
+  </div>
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+  <div className="relative z-10 px-4 py-16 lg:py-48 lg:pb-24 max-w-3xl mx-auto">
+    <h1 className="block text-4xl font-medium text-center text-gray-900 dark:text-zinc-50 tracking-tight">
+      Documentation
+    </h1>
 
-## Make it yours
+    <div className="max-w-xl mx-auto px-4 mt-4 text-lg text-center text-gray-500 dark:text-zinc-500">
+      Meet the next generation of documentation. AI-native, beautiful out-of-the-box, and built for developers and teams.
+    </div>
 
-Design a docs site that looks great and empowers your users.
+    <div className="px-6 lg:px-0 mt-12 lg:mt-24 grid sm:grid-cols-2 gap-x-6 gap-y-4">
+      <HeroCard filename="rocket" title="Quickstart" description="Deploy your first docs site in minutes with our step-by-step guide" href="/quickstart" />
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+      <HeroCard
+        filename="cli"
+        title="CLI installation"
+        description="Install the CLI to preview and develop your docs locally"
+        href="/installation"
+      />
 
-## Create beautiful pages
+      <HeroCard
+        filename="editor"
+        title="Web editor"
+        description="Make quick updates and manage content with our browser-based editor"
+        href="/editor"
+      />
 
-Everything you need to create world-class documentation.
-
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
-
-## Need inspiration?
-
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+      <HeroCard
+        filename="components"
+        title="Components"
+        description="Build rich, interactive documentation with our ready-to-use components"
+        href="/text"
+      />
+    </div>
+  </div>
+</div>
