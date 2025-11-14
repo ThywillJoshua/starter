@@ -34,12 +34,13 @@
     "dark": "/logo/logo-with-wordmark-light.svg"
   },
   "navbar": {
+    "toggle": true,
+    "search_bar": "prominent",
     "links": [
       {
         "label": "Install Bun",
         "href": "https://www.bun.com/docs/installation",
-        "icon": "download",
-        "primary": true
+        "icon": "download"
       }
     ]
   },
@@ -345,6 +346,7 @@
 
       {
         "tab": "Guides",
+        "position": "right",
         "icon": "map",
         "groups": [
           {
@@ -671,12 +673,14 @@
       },
       {
         "tab": "Feedback",
+        "position": "right",
         "icon": "lightbulb",
         "pages": ["/feedback"]
       }
     ]
   },
   "footer": {
+    "toggle": true,
     "socials": {
       "x": "https://x.com/bunjavascript",
       "github": "https://github.com/oven-sh/bun",
