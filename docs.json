@@ -44,7 +44,16 @@
     ]
   },
   "contextual": {
-    "options": ["copy", "view", "chatgpt", "claude", "perplexity", "mcp", "cursor", "vscode"]
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "styling": {
     "codeblocks": {
@@ -75,7 +84,12 @@
           {
             "group": "Core Runtime",
             "icon": "cog",
-            "pages": ["/runtime/index", "/runtime/watch-mode", "/runtime/debugger", "/runtime/bunfig"]
+            "pages": [
+              "/runtime/index",
+              "/runtime/watch-mode",
+              "/runtime/debugger",
+              "/runtime/bunfig"
+            ]
           },
           {
             "group": "File & Module System",
@@ -135,12 +149,21 @@
           {
             "group": "Process & System",
             "icon": "computer",
-            "pages": ["/runtime/environment-variables", "/runtime/shell", "/runtime/child-process"]
+            "pages": [
+              "/runtime/environment-variables",
+              "/runtime/shell",
+              "/runtime/child-process"
+            ]
           },
           {
             "group": "Interop & Tooling",
             "icon": "puzzle",
-            "pages": ["/runtime/node-api", "/runtime/ffi", "/runtime/c-compiler", "/runtime/transpiler"]
+            "pages": [
+              "/runtime/node-api",
+              "/runtime/ffi",
+              "/runtime/c-compiler",
+              "/runtime/transpiler"
+            ]
           },
           {
             "group": "Utilities",
@@ -160,7 +183,12 @@
           {
             "group": "Standards & Compatibility",
             "icon": "badge-check",
-            "pages": ["/runtime/globals", "/runtime/bun-apis", "/runtime/web-apis", "/runtime/nodejs-compat"]
+            "pages": [
+              "/runtime/globals",
+              "/runtime/bun-apis",
+              "/runtime/web-apis",
+              "/runtime/nodejs-compat"
+            ]
           },
           {
             "group": "Contributing",
@@ -183,17 +211,33 @@
           {
             "group": "Core Commands",
             "icon": "terminal",
-            "pages": ["/pm/cli/install", "/pm/cli/add", "/pm/cli/remove", "/pm/cli/update", "/pm/bunx"]
+            "pages": [
+              "/pm/cli/install",
+              "/pm/cli/add",
+              "/pm/cli/remove",
+              "/pm/cli/update",
+              "/pm/bunx"
+            ]
           },
           {
             "group": "Publishing & Analysis",
             "icon": "upload",
-            "pages": ["/pm/cli/publish", "/pm/cli/outdated", "/pm/cli/why", "/pm/cli/audit"]
+            "pages": [
+              "/pm/cli/publish",
+              "/pm/cli/outdated",
+              "/pm/cli/why",
+              "/pm/cli/audit"
+            ]
           },
           {
             "group": "Workspace Management",
             "icon": "folders",
-            "pages": ["/pm/workspaces", "/pm/catalogs", "/pm/cli/link", "/pm/cli/pm"]
+            "pages": [
+              "/pm/workspaces",
+              "/pm/catalogs",
+              "/pm/cli/link",
+              "/pm/cli/pm"
+            ]
           },
           {
             "group": "Advanced Configuration",
@@ -230,7 +274,11 @@
           {
             "group": "Asset Processing",
             "icon": "image",
-            "pages": ["/bundler/html-static", "/bundler/css", "/bundler/loaders"]
+            "pages": [
+              "/bundler/html-static",
+              "/bundler/css",
+              "/bundler/loaders"
+            ]
           },
           {
             "group": "Single File Executable",
@@ -261,7 +309,11 @@
           {
             "group": "Getting Started",
             "icon": "circle-play",
-            "pages": ["/test/index", "/test/writing-tests", "/test/configuration"]
+            "pages": [
+              "/test/index",
+              "/test/writing-tests",
+              "/test/configuration"
+            ]
           },
           {
             "group": "Test Execution",
@@ -271,7 +323,12 @@
           {
             "group": "Test Features",
             "icon": "sparkles",
-            "pages": ["/test/lifecycle", "/test/mocks", "/test/snapshots", "/test/dates-times"]
+            "pages": [
+              "/test/lifecycle",
+              "/test/mocks",
+              "/test/snapshots",
+              "/test/dates-times"
+            ]
           },
           {
             "group": "Specialized Testing",
@@ -549,7 +606,10 @@
           {
             "group": "HTML Processing",
             "icon": "file-code",
-            "pages": ["/guides/html-rewriter/extract-links", "/guides/html-rewriter/extract-social-meta"]
+            "pages": [
+              "/guides/html-rewriter/extract-links",
+              "/guides/html-rewriter/extract-social-meta"
+            ]
           },
           {
             "group": "Binary Data",
