@@ -1,46 +1,39 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
-  "name": "Bun",
+  "name": "Pulse Help Center",
   "seo": {
     "metatags": {
-      "canonical": "https://bun.com/docs"
+      "canonical": "https://www.start-pulse.com/en/resources/help"
     }
   },
   "colors": {
-    "light": "#ff73a8",
-    "primary": "#ff73a8",
-    "dark": "#ff73a8"
+    "light": "#0166CC",
+    "primary": "#0166CC",
+    "dark": "#0166CC"
   },
   "background": {
     "decoration": "gradient"
   },
-  "favicon": "/logo/bun.png",
+  "favicon": "/images/favicon.svg",
   "icons": {
     "library": "lucide"
   },
-  "fonts": {
-    "heading": {
-      "family": "Inter Display Bold",
-      "source": "https://mintlify-assets.b-cdn.net/fonts/InterDisplay-Bold.woff2",
-      "format": "woff2"
-    }
+  "logo": {
+    "light": "/images/pulse-brand-light-mode.svg",
+    "dark": "/images/pulse-brand-dark-mode.svg"
   },
   "appearance": {
     "default": "system"
-  },
-  "logo": {
-    "light": "/logo/logo-with-wordmark-dark.svg",
-    "dark": "/logo/logo-with-wordmark-light.svg"
   },
   "navbar": {
     "toggle": true,
     "search_bar": "prominent",
     "links": [
       {
-        "label": "Install Bun",
-        "href": "https://www.bun.com/docs/installation",
-        "icon": "download"
+        "label": "Visit Pulse",
+        "href": "https://www.start-pulse.com/",
+        "icon": "external-link"
       }
     ]
   },
@@ -67,625 +60,197 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Runtime",
-        "icon": "cog",
-        "groups": [
-          {
-            "group": "Get Started",
-            "icon": "terminal",
-            "pages": [
-              "/index",
-              "/installation",
-              "/quickstart",
-              "/typescript",
-              "/runtime/templating/init",
-              "/runtime/templating/create"
-            ]
-          },
-          {
-            "group": "Core Runtime",
-            "icon": "cog",
-            "pages": [
-              "/runtime/index",
-              "/runtime/watch-mode",
-              "/runtime/debugger",
-              "/runtime/bunfig"
-            ]
-          },
-          {
-            "group": "File & Module System",
-            "icon": "file",
-            "pages": [
-              "/runtime/file-types",
-              "/runtime/module-resolution",
-              "/runtime/jsx",
-              "/runtime/auto-install",
-              "/runtime/plugins",
-              "/runtime/file-system-router"
-            ]
-          },
-          {
-            "group": "HTTP server",
-            "icon": "server",
-            "pages": [
-              "/runtime/http/server",
-              "/runtime/http/routing",
-              "/runtime/http/cookies",
-              "/runtime/http/tls",
-              "/runtime/http/error-handling",
-              "/runtime/http/metrics"
-            ]
-          },
-          {
-            "group": "Networking",
-            "icon": "globe",
-            "expanded": true,
-            "pages": [
-              "/runtime/networking/fetch",
-              "/runtime/http/websockets",
-              "/runtime/networking/tcp",
-              "/runtime/networking/udp",
-              "/runtime/networking/dns"
-            ]
-          },
-          {
-            "group": "Data & Storage",
-            "icon": "database",
-            "pages": [
-              "/runtime/cookies",
-              "/runtime/file-io",
-              "/runtime/streams",
-              "/runtime/binary-data",
-              "/runtime/sql",
-              "/runtime/sqlite",
-              "/runtime/s3",
-              "/runtime/redis"
-            ]
-          },
-          {
-            "group": "Concurrency",
-            "icon": "split",
-            "pages": ["/runtime/workers"]
-          },
-          {
-            "group": "Process & System",
-            "icon": "computer",
-            "pages": [
-              "/runtime/environment-variables",
-              "/runtime/shell",
-              "/runtime/child-process"
-            ]
-          },
-          {
-            "group": "Interop & Tooling",
-            "icon": "puzzle",
-            "pages": [
-              "/runtime/node-api",
-              "/runtime/ffi",
-              "/runtime/c-compiler",
-              "/runtime/transpiler"
-            ]
-          },
-          {
-            "group": "Utilities",
-            "icon": "wrench",
-            "pages": [
-              "/runtime/secrets",
-              "/runtime/console",
-              "/runtime/yaml",
-              "/runtime/html-rewriter",
-              "/runtime/hashing",
-              "/runtime/glob",
-              "/runtime/semver",
-              "/runtime/color",
-              "/runtime/utils"
-            ]
-          },
-          {
-            "group": "Standards & Compatibility",
-            "icon": "badge-check",
-            "pages": [
-              "/runtime/globals",
-              "/runtime/bun-apis",
-              "/runtime/web-apis",
-              "/runtime/nodejs-compat"
-            ]
-          },
-          {
-            "group": "Contributing",
-            "icon": "heart",
-            "pages": [
-              "/project/roadmap",
-              "/project/benchmarking",
-              "/project/contributing",
-              "/project/building-windows",
-              "/project/bindgen",
-              "/project/license"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Package Manager",
-        "icon": "box",
-        "groups": [
-          {
-            "group": "Core Commands",
-            "icon": "terminal",
-            "pages": [
-              "/pm/cli/install",
-              "/pm/cli/add",
-              "/pm/cli/remove",
-              "/pm/cli/update",
-              "/pm/bunx"
-            ]
-          },
-          {
-            "group": "Publishing & Analysis",
-            "icon": "upload",
-            "pages": [
-              "/pm/cli/publish",
-              "/pm/cli/outdated",
-              "/pm/cli/why",
-              "/pm/cli/audit"
-            ]
-          },
-          {
-            "group": "Workspace Management",
-            "icon": "folders",
-            "pages": [
-              "/pm/workspaces",
-              "/pm/catalogs",
-              "/pm/cli/link",
-              "/pm/cli/pm"
-            ]
-          },
-          {
-            "group": "Advanced Configuration",
-            "icon": "settings",
-            "pages": [
-              "/pm/cli/patch",
-              "/pm/filter",
-              "/pm/global-cache",
-              "/pm/isolated-installs",
-              "/pm/lockfile",
-              "/pm/lifecycle",
-              "/pm/scopes-registries",
-              "/pm/overrides",
-              "/pm/security-scanner-api",
-              "/pm/npmrc"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Bundler",
-        "icon": "combine",
-        "groups": [
-          {
-            "group": "Core",
-            "icon": "package",
-            "pages": ["/bundler/index"]
-          },
-          {
-            "group": "Development Server",
-            "icon": "monitor",
-            "pages": ["/bundler/fullstack", "/bundler/hot-reloading"]
-          },
-          {
-            "group": "Asset Processing",
-            "icon": "image",
-            "pages": [
-              "/bundler/html-static",
-              "/bundler/css",
-              "/bundler/loaders"
-            ]
-          },
-          {
-            "group": "Single File Executable",
-            "icon": "binary",
-            "pages": ["/bundler/executables"]
-          },
-          {
-            "group": "Extensions",
-            "icon": "plug",
-            "pages": ["/bundler/plugins", "/bundler/macros"]
-          },
-          {
-            "group": "Optimization",
-            "icon": "zap",
-            "pages": ["/bundler/bytecode", "/bundler/minifier"]
-          },
-          {
-            "group": "Migration",
-            "icon": "arrow-right",
-            "pages": ["/bundler/esbuild"]
-          }
-        ]
-      },
-      {
-        "tab": "Test Runner",
-        "icon": "flask-conical",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "icon": "circle-play",
-            "pages": [
-              "/test/index",
-              "/test/writing-tests",
-              "/test/configuration"
-            ]
-          },
-          {
-            "group": "Test Execution",
-            "icon": "zap",
-            "pages": ["/test/runtime-behavior", "/test/discovery"]
-          },
-          {
-            "group": "Test Features",
-            "icon": "sparkles",
-            "pages": [
-              "/test/lifecycle",
-              "/test/mocks",
-              "/test/snapshots",
-              "/test/dates-times"
-            ]
-          },
-          {
-            "group": "Specialized Testing",
-            "icon": "microscope",
-            "pages": ["/test/dom"]
-          },
-          {
-            "group": "Reporting",
-            "icon": "file-text",
-            "pages": ["/test/code-coverage", "/test/reporters"]
-          }
-        ]
-      },
-
-      {
-        "tab": "Guides",
-        "position": "right",
-        "icon": "map",
+        "tab": "Admins",
+        "icon": "settings",
         "groups": [
           {
             "group": "Overview",
-            "icon": "globe",
-            "pages": ["/guides/index"]
-          },
-          {
-            "group": "Deployment",
-            "icon": "rocket",
+            "icon": "book-open",
             "pages": [
-              "/guides/deployment/vercel",
-              "/guides/deployment/railway",
-              "/guides/deployment/render",
-              "/guides/deployment/aws-lambda",
-              "/guides/deployment/digital-ocean",
-              "/guides/deployment/google-cloud-run"
+              "/index"
             ]
           },
           {
-            "group": "Runtime & Debugging",
-            "icon": "bug",
+            "group": "Admin login & settings",
+            "icon": "key-round",
             "pages": [
-              "/guides/runtime/typescript",
-              "/guides/runtime/tsconfig-paths",
-              "/guides/runtime/vscode-debugger",
-              "/guides/runtime/web-debugger",
-              "/guides/runtime/heap-snapshot",
-              "/guides/runtime/build-time-constants",
-              "/guides/runtime/define-constant",
-              "/guides/runtime/cicd",
-              "/guides/runtime/codesign-macos-executable"
+              "/admin/login-settings/index",
+              "/shared/login/change-your-password",
+              "/shared/login/log-in-to-pulse-feedback",
+              "/shared/login/single-sign-on-sso",
+              "/admin/login-settings/other-settings/add-and-manage-administrators",
+              "/admin/login-settings/other-settings/add-and-manage-guest-users",
+              "/admin/login-settings/other-settings/fix-incorrect-team-assignments",
+              "/admin/login-settings/other-settings/guest-users",
+              "/admin/login-settings/other-settings/administrator-rights"
             ]
           },
           {
-            "group": "Utilities",
-            "icon": "wrench",
+            "group": "Managing surveys",
+            "icon": "settings",
             "pages": [
-              "/guides/util/detect-bun",
-              "/guides/util/version",
-              "/guides/util/hash-a-password",
-              "/guides/util/javascript-uuid",
-              "/guides/util/base64",
-              "/guides/util/gzip",
-              "/guides/util/deflate",
-              "/guides/util/escape-html",
-              "/guides/util/deep-equals",
-              "/guides/util/sleep",
-              "/guides/util/file-url-to-path",
-              "/guides/util/path-to-file-url",
-              "/guides/util/which-path-to-executable-bin",
-              "/guides/util/import-meta-dir",
-              "/guides/util/import-meta-file",
-              "/guides/util/import-meta-path",
-              "/guides/util/entrypoint",
-              "/guides/util/main"
+              "/admin/managing-surveys/index",
+              "/admin/managing-surveys/comment-moderation/moderate-reported-comments",
+              "/admin/managing-surveys/comment-moderation/best-way-to-handle-inappropriate-comments",
+              "/admin/managing-surveys/e-mail-einstellungen/change-the-text-of-the-invitation-reminder-and-results-emails",
+              "/admin/managing-surveys/e-mail-einstellungen/create-your-own-invitation-reminder-or-results-emails",
+              "/admin/managing-surveys/e-mail-einstellungen/languages-supported-by-pulse",
+              "/admin/managing-surveys/participant-management/team-creation-process",
+              "/admin/managing-surveys/participant-management/assign-a-survey-to-selected-teams-only",
+              "/admin/managing-surveys/participant-management/bulk-edit-participants",
+              "/admin/managing-surveys/participant-management/edit-one-or-more-participants-e-g-change-name-team-or-manager",
+              "/admin/managing-surveys/participant-management/import-participants",
+              "/admin/managing-surveys/question-management/add-your-own-questions",
+              "/admin/managing-surveys/question-management/translation-requirements-for-questions",
+              "/admin/managing-surveys/question-management/add-and-manage-topics",
+              "/admin/managing-surveys/question-management/assign-new-own-questions-to-the-existing-topic-areas",
+              "/admin/managing-surveys/question-management/purpose-of-the-subject-areas",
+              "/admin/managing-surveys/question-management/hidden-questions-across-teams",
+              "/admin/managing-surveys/survey-setup/edit-a-survey-you-set-up-before-it-has-started",
+              "/admin/managing-surveys/survey-setup/make-changes-to-a-survey-if-it-has-already-started",
+              "/admin/managing-surveys/survey-setup/reuse-an-earlier-survey",
+              "/admin/managing-surveys/survey-setup/set-up-a-survey",
+              "/admin/managing-surveys/survey-setup/survey-workflow"
             ]
           },
           {
-            "group": "Ecosystem & Frameworks",
-            "icon": "puzzle",
+            "group": "Security & privacy",
+            "icon": "shield",
             "pages": [
-              "/guides/ecosystem/astro",
-              "/guides/ecosystem/discordjs",
-              "/guides/ecosystem/docker",
-              "/guides/ecosystem/drizzle",
-              "/guides/ecosystem/gel",
-              "/guides/ecosystem/elysia",
-              "/guides/ecosystem/express",
-              "/guides/ecosystem/hono",
-              "/guides/ecosystem/mongoose",
-              "/guides/ecosystem/neon-drizzle",
-              "/guides/ecosystem/neon-serverless-postgres",
-              "/guides/ecosystem/nextjs",
-              "/guides/ecosystem/nuxt",
-              "/guides/ecosystem/pm2",
-              "/guides/ecosystem/prisma",
-              "/guides/ecosystem/prisma-postgres",
-              "/guides/ecosystem/qwik",
-              "/guides/ecosystem/react",
-              "/guides/ecosystem/remix",
-              "/guides/ecosystem/tanstack-start",
-              "/guides/ecosystem/sentry",
-              "/guides/ecosystem/solidstart",
-              "/guides/ecosystem/ssr-react",
-              "/guides/ecosystem/stric",
-              "/guides/ecosystem/sveltekit",
-              "/guides/ecosystem/systemd",
-              "/guides/ecosystem/vite",
-              "/guides/ecosystem/upstash"
+              "/admin/security-privacy/index",
+              "/admin/security-privacy/data-protection/as-a-company-upload-our-own-privacy-policy-to-pulse",
+              "/admin/security-privacy/data-protection/employee-consent-requirements-for-data-processing",
+              "/admin/security-privacy/data-protection/pulse-compliance-with-the-eu-dsgvo",
+              "/admin/security-privacy/data-protection/personal-data-retention",
+              "/admin/security-privacy/data-protection/request-deletion-of-personal-files",
+              "/admin/security-privacy/data-protection/personal-data-processed",
+              "/admin/security-privacy/data-protection/protecting-your-privacy",
+              "/admin/security-privacy/security/data-encryption",
+              "/admin/security-privacy/security/data-loss-protection",
+              "/admin/security-privacy/security/pulse-iso-certification",
+              "/admin/security-privacy/security/data-storage-locations"
             ]
           },
           {
-            "group": "HTTP & Networking",
-            "icon": "globe",
+            "group": "The Pulse method",
+            "icon": "sparkles",
             "pages": [
-              "/guides/http/server",
-              "/guides/http/simple",
-              "/guides/http/fetch",
-              "/guides/http/hot",
-              "/guides/http/cluster",
-              "/guides/http/tls",
-              "/guides/http/proxy",
-              "/guides/http/stream-file",
-              "/guides/http/file-uploads",
-              "/guides/http/fetch-unix",
-              "/guides/http/stream-iterator",
-              "/guides/http/stream-node-streams-in-bun"
-            ]
-          },
-          {
-            "group": "WebSocket",
-            "icon": "radio",
-            "pages": [
-              "/guides/websocket/simple",
-              "/guides/websocket/pubsub",
-              "/guides/websocket/context",
-              "/guides/websocket/compression"
-            ]
-          },
-          {
-            "group": "Processes & System",
-            "icon": "cpu",
-            "pages": [
-              "/guides/process/spawn",
-              "/guides/process/spawn-stdout",
-              "/guides/process/spawn-stderr",
-              "/guides/process/argv",
-              "/guides/process/stdin",
-              "/guides/process/ipc",
-              "/guides/process/ctrl-c",
-              "/guides/process/os-signals",
-              "/guides/process/nanoseconds",
-              "/guides/runtime/shell",
-              "/guides/runtime/timezone",
-              "/guides/runtime/set-env",
-              "/guides/runtime/read-env"
-            ]
-          },
-          {
-            "group": "Package Manager",
-            "icon": "package",
-            "pages": [
-              "/guides/install/add",
-              "/guides/install/add-dev",
-              "/guides/install/add-optional",
-              "/guides/install/add-peer",
-              "/guides/install/add-git",
-              "/guides/install/add-tarball",
-              "/guides/install/npm-alias",
-              "/guides/install/workspaces",
-              "/guides/install/custom-registry",
-              "/guides/install/registry-scope",
-              "/guides/install/azure-artifacts",
-              "/guides/install/jfrog-artifactory",
-              "/guides/install/trusted",
-              "/guides/install/yarnlock",
-              "/guides/install/from-npm-install-to-bun-install",
-              "/guides/install/git-diff-bun-lockfile",
-              "/guides/install/cicd"
-            ]
-          },
-          {
-            "group": "Test Runner",
-            "icon": "flask-conical",
-            "pages": [
-              "/guides/test/run-tests",
-              "/guides/test/watch-mode",
-              "/guides/test/migrate-from-jest",
-              "/guides/test/mock-functions",
-              "/guides/test/spy-on",
-              "/guides/test/mock-clock",
-              "/guides/test/snapshot",
-              "/guides/test/update-snapshots",
-              "/guides/test/coverage",
-              "/guides/test/coverage-threshold",
-              "/guides/test/skip-tests",
-              "/guides/test/todo-tests",
-              "/guides/test/timeout",
-              "/guides/test/bail",
-              "/guides/test/rerun-each",
-              "/guides/test/testing-library",
-              "/guides/test/happy-dom",
-              "/guides/test/svelte-test"
-            ]
-          },
-          {
-            "group": "Runtime & Debugging",
-            "icon": "bug",
-            "pages": [
-              "/guides/runtime/vscode-debugger",
-              "/guides/runtime/web-debugger",
-              "/guides/runtime/heap-snapshot",
-              "/guides/runtime/build-time-constants",
-              "/guides/runtime/define-constant",
-              "/guides/runtime/cicd",
-              "/guides/runtime/codesign-macos-executable"
-            ]
-          },
-          {
-            "group": "Module System",
-            "icon": "box",
-            "pages": [
-              "/guides/runtime/import-json",
-              "/guides/runtime/import-toml",
-              "/guides/runtime/import-yaml",
-              "/guides/runtime/import-html",
-              "/guides/util/import-meta-dir",
-              "/guides/util/import-meta-file",
-              "/guides/util/import-meta-path",
-              "/guides/util/entrypoint",
-              "/guides/util/main"
-            ]
-          },
-          {
-            "group": "File System",
-            "icon": "folder",
-            "pages": [
-              "/guides/read-file/string",
-              "/guides/read-file/buffer",
-              "/guides/read-file/uint8array",
-              "/guides/read-file/arraybuffer",
-              "/guides/read-file/json",
-              "/guides/read-file/mime",
-              "/guides/read-file/exists",
-              "/guides/read-file/watch",
-              "/guides/read-file/stream",
-              "/guides/write-file/basic",
-              "/guides/write-file/blob",
-              "/guides/write-file/response",
-              "/guides/write-file/append",
-              "/guides/write-file/filesink",
-              "/guides/write-file/stream",
-              "/guides/write-file/stdout",
-              "/guides/write-file/cat",
-              "/guides/write-file/file-cp",
-              "/guides/write-file/unlink",
-              "/guides/runtime/delete-file",
-              "/guides/runtime/delete-directory"
-            ]
-          },
-          {
-            "group": "Utilities",
-            "icon": "wrench",
-            "pages": [
-              "/guides/util/hash-a-password",
-              "/guides/util/javascript-uuid",
-              "/guides/util/base64",
-              "/guides/util/gzip",
-              "/guides/util/deflate",
-              "/guides/util/escape-html",
-              "/guides/util/deep-equals",
-              "/guides/util/sleep",
-              "/guides/util/file-url-to-path",
-              "/guides/util/path-to-file-url",
-              "/guides/util/which-path-to-executable-bin"
-            ]
-          },
-          {
-            "group": "HTML Processing",
-            "icon": "file-code",
-            "pages": [
-              "/guides/html-rewriter/extract-links",
-              "/guides/html-rewriter/extract-social-meta"
-            ]
-          },
-          {
-            "group": "Binary Data",
-            "icon": "binary",
-            "pages": [
-              "/guides/binary/arraybuffer-to-string",
-              "/guides/binary/arraybuffer-to-buffer",
-              "/guides/binary/arraybuffer-to-blob",
-              "/guides/binary/arraybuffer-to-array",
-              "/guides/binary/arraybuffer-to-typedarray",
-              "/guides/binary/buffer-to-string",
-              "/guides/binary/buffer-to-arraybuffer",
-              "/guides/binary/buffer-to-blob",
-              "/guides/binary/buffer-to-typedarray",
-              "/guides/binary/buffer-to-readablestream",
-              "/guides/binary/blob-to-string",
-              "/guides/binary/blob-to-arraybuffer",
-              "/guides/binary/blob-to-typedarray",
-              "/guides/binary/blob-to-dataview",
-              "/guides/binary/blob-to-stream",
-              "/guides/binary/typedarray-to-string",
-              "/guides/binary/typedarray-to-arraybuffer",
-              "/guides/binary/typedarray-to-buffer",
-              "/guides/binary/typedarray-to-blob",
-              "/guides/binary/typedarray-to-dataview",
-              "/guides/binary/typedarray-to-readablestream",
-              "/guides/binary/dataview-to-string"
-            ]
-          },
-          {
-            "group": "Streams",
-            "icon": "waves",
-            "pages": [
-              "/guides/streams/to-string",
-              "/guides/streams/to-json",
-              "/guides/streams/to-blob",
-              "/guides/streams/to-buffer",
-              "/guides/streams/to-arraybuffer",
-              "/guides/streams/to-typedarray",
-              "/guides/streams/to-array",
-              "/guides/streams/node-readable-to-string",
-              "/guides/streams/node-readable-to-json",
-              "/guides/streams/node-readable-to-blob",
-              "/guides/streams/node-readable-to-uint8array",
-              "/guides/streams/node-readable-to-arraybuffer"
+              "/admin/the-pulse-method/index",
+              "/admin/the-pulse-method/other-questions/using-pulse-in-agile-organizations",
+              "/admin/the-pulse-method/other-questions/licensing-for-limited-survey-runs",
+              "/admin/the-pulse-method/other-questions/peer-feedback-survey-workflow",
+              "/admin/the-pulse-method/other-questions/team-feedback-survey-workflow",
+              "/admin/the-pulse-method/other-questions/peer-feedback-survey-cadence",
+              "/admin/the-pulse-method/other-questions/team-feedback-survey-cadence",
+              "/admin/the-pulse-method/other-questions/working-environment-definition",
+              "/admin/the-pulse-method/other-questions/importance-of-feedback",
+              "/admin/the-pulse-method/understanding-pulse-feedback/survey-participation-requirements",
+              "/admin/the-pulse-method/understanding-pulse-feedback/pulse-bottom-up-approach",
+              "/admin/the-pulse-method/understanding-pulse-feedback/score-calculation",
+              "/admin/the-pulse-method/understanding-pulse-feedback/pulse-driven-improvements",
+              "/admin/the-pulse-method/understanding-pulse-feedback/pulse-driven-change-momentum",
+              "/admin/the-pulse-method/understanding-pulse-feedback/pulse",
+              "/admin/the-pulse-method/understanding-pulse-feedback/difference-between-pulse-and-other-employee-surveys",
+              "/admin/the-pulse-method/understanding-pulse-feedback/survey-invitees",
+              "/admin/the-pulse-method/understanding-pulse-feedback/transparent-feedback-rationale",
+              "/admin/the-pulse-method/understanding-pulse-feedback/impact-of-answers-on-performance-reviews"
             ]
           }
         ]
       },
       {
-        "tab": "Reference",
-        "icon": "book",
-        "href": "https://bun.com/reference"
-      },
-      {
-        "tab": "Blog",
-        "icon": "newspaper",
-        "href": "https://bun.com/blog"
-      },
-      {
-        "tab": "Feedback",
-        "position": "right",
-        "icon": "lightbulb",
-        "pages": ["/feedback"]
+        "tab": "Participants",
+        "icon": "users",
+        "groups": [
+          {
+            "group": "Team feedback",
+            "icon": "users",
+            "pages": [
+              "/participants/team-feedback/index",
+              "/participants/team-feedback/comments/filter-the-comments",
+              "/participants/team-feedback/comments/like-a-comment",
+              "/participants/team-feedback/comments/report-a-comment",
+              "/participants/team-feedback/comments/see-the-comments-for-each-question",
+              "/participants/team-feedback/custom-teams/create-or-edit-a-group",
+              "/participants/team-feedback/feedback-visibility-and-teams/see-the-results-even-if-you-didnt-participate-in-the-survey",
+              "/participants/team-feedback/feedback-visibility-and-teams/team-creation-process",
+              "/participants/team-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
+              "/participants/team-feedback/feedback-visibility-and-teams/team-feedback-visibility",
+              "/participants/team-feedback/feedback-visibility-and-teams/ratings-visibility",
+              "/participants/team-feedback/feedback-visibility-and-teams/survey-participants",
+              "/participants/team-feedback/getting-started/skip-a-question",
+              "/participants/team-feedback/getting-started/survey-cadence",
+              "/participants/team-feedback/getting-started/supported-devices-for-pulse-feedback",
+              "/participants/team-feedback/getting-started/considerations-when-giving-feedback",
+              "/participants/team-feedback/getting-started/find-your-participant-link-for-the-survey",
+              "/participants/team-feedback/giving-feedback/change-your-answers-after-youve-submitted-the-survey",
+              "/participants/team-feedback/giving-feedback/survey-participation-requirements",
+              "/participants/team-feedback/giving-feedback/make-sure-that-your-feedback-is-useful-and-taken-into-account",
+              "/participants/team-feedback/giving-feedback/fix-incorrect-team-assignments",
+              "/participants/team-feedback/giving-feedback/importance-of-feedback",
+              "/participants/team-feedback/results-exports/export-the-survey-data-in-excel-format",
+              "/participants/team-feedback/results-exports/obtain-a-non-anonymous-data-export",
+              "/participants/team-feedback/results-exports/export-the-results",
+              "/participants/team-feedback/results-visibility/make-your-comments-visible-to-people-outside-your-team-with-photo-and-name",
+              "/participants/team-feedback/results-visibility/see-the-distribution-of-the-ratings",
+              "/participants/team-feedback/results-visibility/answer-visibility-duration",
+              "/participants/team-feedback/results-visibility/question-availability-for-participating-teams",
+              "/participants/team-feedback/results-workshops/considerations-to-achieve-a-successful-results-meeting",
+              "/participants/team-feedback/results-workshops/considerations-when-receiving-feedback",
+              "/participants/team-feedback/results-workshops/find-materials-for-the-discussion-of-the-results-in-your-team",
+              "/participants/team-feedback/scores-and-comparisons/compare-the-results-from-different-surveys",
+              "/participants/team-feedback/scores-and-comparisons/compare-the-results-team-scores-from-different-teams",
+              "/participants/team-feedback/scores-and-comparisons/see-the-results-of-a-specific-team",
+              "/participants/team-feedback/scores-and-comparisons/score-calculation",
+              "/participants/team-feedback/scores-and-comparisons/survey-result-availability"
+            ]
+          },
+          {
+            "group": "Peer feedback",
+            "icon": "message-circle",
+            "pages": [
+              "/participants/peer-feedback/index",
+              "/participants/peer-feedback/comments/see-the-comments-for-each-question",
+              "/participants/peer-feedback/feedback-visibility-and-teams/see-who-has-participated-in-your-survey",
+              "/participants/peer-feedback/feedback-visibility-and-teams/answer-visibility-duration",
+              "/participants/peer-feedback/feedback-visibility-and-teams/results-availability-timeline",
+              "/participants/peer-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
+              "/participants/peer-feedback/feedback-visibility-and-teams/rating-visibility",
+              "/participants/peer-feedback/feedback-visibility-and-teams/peer-feedback-visibility",
+              "/participants/peer-feedback/getting-started/peer-feedback-survey-window-and-extensions",
+              "/participants/peer-feedback/getting-started/survey-invitation-limits",
+              "/participants/peer-feedback/getting-started/supported-devices-for-pulse",
+              "/participants/peer-feedback/getting-started/considerations-when-giving-feedback",
+              "/participants/peer-feedback/getting-started/find-your-surveys-participation-link",
+              "/participants/peer-feedback/getting-started/reason-there-is-no-n-a-option",
+              "/participants/peer-feedback/giving-feedback/change-your-answers-after-youve-sent-the-survey",
+              "/participants/peer-feedback/giving-feedback/survey-participation-requirements",
+              "/participants/peer-feedback/giving-feedback/make-sure-that-your-feedback-is-useful-and-taken-into-account",
+              "/participants/peer-feedback/giving-feedback/survey-participation-eligibility",
+              "/participants/peer-feedback/giving-feedback/importance-of-feedback",
+              "/participants/peer-feedback/results-exports/export-the-results-as-an-excel-file",
+              "/participants/peer-feedback/results-exports/obtain-a-non-anonymous-data-export",
+              "/participants/peer-feedback/results-exports/export-the-results",
+              "/participants/peer-feedback/results-workshops/make-the-meeting-about-the-results-a-success",
+              "/participants/peer-feedback/results-workshops/considerations-when-receiving-feedback",
+              "/participants/peer-feedback/results-workshops/find-material-to-discuss-the-results",
+              "/participants/peer-feedback/scores-and-comparisons/compare-different-surveys-with-each-other",
+              "/participants/peer-feedback/scores-and-comparisons/score-calculation"
+            ]
+          },
+          {
+            "group": "Account & profile",
+            "icon": "key-round",
+            "pages": [
+              "/shared/login/change-your-password",
+              "/shared/login/log-in-to-pulse-feedback",
+              "/shared/login/single-sign-on-sso",
+              "/participants/profile-language/change-the-language-of-the-application",
+              "/participants/profile-language/set-up-your-profile-picture"
+            ]
+          }
+        ]
       }
     ]
-  },
-  "footer": {
-    "toggle": true,
-    "socials": {
-      "x": "https://x.com/bunjavascript",
-      "github": "https://github.com/oven-sh/bun",
-      "discord": "https://bun.com/discord",
-      "youtube": "https://www.youtube.com/@bunjs"
-    }
   }
 }
