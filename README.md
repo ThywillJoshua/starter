@@ -1,16 +1,13 @@
-## Pulse Help Center
+# Mintlify Documentation
 
-Mintlify project that powers the Pulse Help tab embedded in ClaraDocs.
+Install the [Mint CLI](https://www.npmjs.com/package/mint) to preview the documentation changes locally. To install, use the following command
 
-### Development
-
-```bash
-# install Mintlify CLI once
-bun install -g mint
-
-# run the docs locally
-cd pulse-docs
-mint dev
+```
+npm i -g mint
 ```
 
-The site is intentionally single-tab: all content lives inside `/help`. Update `docs.json` to add navigation groups or tweak theming, and add/edit articles inside `help/<category>/...`.
+Run the following command at the root of your documentation (where docs.json is)
+
+```
+mint dev
+```

@@ -1,0 +1,442 @@
+---
+title: "Vérifications CI"
+description: "Automatisez les contrôles de liens brisés, le linting et la validation grammaticale dans vos pipelines CI/CD."
+keywords: ["continuous integration", "CI/CD", "checks", "Vale", "linter"]
+---
+
+<Info>
+  Les [offres Pro et Custom](https://mintlify.com/pricing?ref=docs-ci) incluent des vérifications CI pour les dépôts GitHub.
+</Info>
+
+Utilisez les vérifications CI pour analyser votre documentation, détecter les erreurs et signaler des avertissements avant le déploiement. Les vérifications CI de Mintlify s’exécutent sur les pull requests (demandes de fusion) visant une branche de déploiement configurée.
+
+<div id="installation">
+  ## Installation
+</div>
+
+Pour commencer, suivez les étapes indiquées sur la page [GitHub](/fr/deploy/github).
+
+<Tip>
+  Seul l’accès au référentiel où se trouve le contenu de votre documentation est requis ; il est donc fortement recommandé de n’accorder l’accès qu’à ce référentiel.
+</Tip>
+
+## Configuration
+
+Configurez les contrôles CI activés pour un déploiement en accédant à la page [Modules complémentaires](https://dashboard.mintlify.com/products/addons) de votre Dashboard. Activez les contrôles que vous souhaitez exécuter.
+
+Lors de l’activation des contrôles, vous pouvez choisir de les exécuter au niveau `Avertissement` ou `Bloquant`.
+
+* Un contrôle de niveau `Avertissement` n’indiquera jamais un statut d’échec, même en cas d’erreur ou de suggestions.
+* Un contrôle de niveau `Bloquant` indiquera un statut d’échec en cas d’erreur ou de suggestions.
+
+<div id="available-ci-checks">
+  ## Vérifications CI disponibles
+</div>
+
+<div id="broken-links">
+  ### Liens cassés
+</div>
+
+Comme le [vérificateur de liens de l’interface en ligne de commande (CLI)](/fr/installation#find-broken-links) sur votre machine locale, la vérification CI des liens cassés recherche automatiquement les liens internes cassés dans le contenu de votre documentation.
+
+Pour consulter les résultats de cette vérification, rendez-vous sur la page des résultats des vérifications GitHub pour un commit spécifique.
+
+<div id="vale">
+  ### Vale
+</div>
+
+[Vale](https://vale.sh/) est un linter de prose open source basé sur des règles, compatible avec divers types de documents, dont Markdown et MDX.
+
+Mintlify prend en charge l’exécution automatique de Vale dans une vérification CI et l’affichage des résultats sous forme d’état de vérification.
+
+<div id="configuration">
+  #### Configuration
+</div>
+
+Si vous avez un fichier `.vale.ini` à la racine du répertoire content de votre déploiement, le contrôle Vale CI utilise ce fichier de configuration ainsi que tout fichier de configuration présent dans le `stylesPath` que vous avez spécifié.
+
+Si vous n’avez pas de fichier de configuration Vale, la configuration par défaut est chargée automatiquement.
+
+```mdx Default vale.ini configuration expandable
+# Styles de niveau supérieur
+StylesPath = /app/styles
+MinAlertLevel = suggestion
+IgnoredScopes = code, tt, img, url, a
+SkippedScopes = script, style, pre, figure, code
+
+# Vocabulaires
+Vocab = Mintlify
+
+# Requis car Vale ne prend pas officiellement en charge MDX
+[formats]
+mdx = md
+
+# Prise en charge de MDX
+[*.mdx]
+BasedOnStyles = Vale
+Vale.Terms = NO # Applique des règles de capitalisation très strictes, laisser désactivé
+
+# `import ...`, `export ...`
+# `<Component ... />`
+# `<Component>...</Component>`
+# `{ ... }`
+TokenIgnores = (?sm)((?:import|export) .+?$), \
+(?<!`)(<\w+ ?.+ ?\/>)(?!`), \
+(<[A-Z]\w+>.+?<\/[A-Z]\w+>)
+
+# Exclure :
+# `<Component \n ... />`
+BlockIgnores = (?sm)^(<\w+\n .*\s\/>)$, \
+(?sm)^({.+.*})
+
+CommentDelimiters = {/*, */}
+```
+
+```text Default Vale vocabulary expandable
+Mintlify
+mintlify
+VSCode
+openapi
+OpenAPI
+Github
+APIs
+
+repo
+npm
+dev
+
+Lorem
+ipsum
+impsum
+amet
+
+const
+myName
+myObject
+bearerAuth
+favicon
+topbar
+url
+borderRadius
+args
+modeToggle
+ModeToggle
+isHidden
+autoplay
+
+_italic_
+Strikethrough
+Blockquotes
+Blockquote
+Singleline
+Multiline
+
+onboarding
+
+async
+await
+boolean
+enum
+func
+impl
+init
+instanceof
+typeof
+params
+stdin
+stdout
+stderr
+stdout
+stdin
+var
+const
+let
+null
+undefined
+struct
+bool
+
+cors
+csrf
+env
+xhr
+xhr2
+jwt
+oauth
+websocket
+localhost
+middleware
+runtime
+webhook
+stdin
+stdout
+
+json
+yaml
+yml
+md
+txt
+tsx
+jsx
+css
+scss
+html
+png
+jpg
+svg
+
+cdn
+cli
+css
+dom
+dto
+env
+git
+gui
+http
+https
+ide
+jvm
+mvc
+orm
+rpc
+sdk
+sql
+ssh
+ssl
+tcp
+tls
+uri
+url
+ux
+ui
+
+nodejs
+npm
+yarn
+pnpm
+eslint
+pytest
+golang
+rustc
+kubectl
+mongo
+postgres
+redis
+
+JavaScript
+TypeScript
+Python
+Ruby
+Rust
+Go
+Golang
+Java
+Kotlin
+Swift
+Node.js
+NodeJS
+Deno
+
+React
+Vue
+Angular
+Next.js
+Nuxt
+Express
+Django
+Flask
+Spring
+Laravel
+Redux
+Vuex
+TensorFlow
+PostgreSQL
+MongoDB
+Redis
+PNPM
+
+Docker
+Kubernetes
+AWS
+Azure
+GCP
+Terraform
+Jenkins
+CircleCI
+GitLab
+Heroku
+
+Git
+git
+GitHub
+GitLab
+Bitbucket
+VSCode
+Visual Studio Code
+IntelliJ
+WebStorm
+ESLint
+eslint
+Prettier
+prettier
+Webpack
+webpack
+Vite
+vite
+Babel
+babel
+Jest
+jest
+Mocha
+Cypress
+Postman
+
+HTTP
+HTTPS
+OAuth
+JWT
+GraphQL
+REST
+WebSocket
+TCP/IP
+
+NPM
+Yarn
+PNPM
+Pip
+PIP
+Cargo
+RubyGems
+
+Swagger
+OpenAPI
+Markdown
+MDX
+Storybook
+TypeDoc
+JSDoc
+
+MySQL
+PostgreSQL
+MongoDB
+Redis
+Elasticsearch
+DynamoDB
+
+Linux
+Unix
+macOS
+iOS
+
+Firefox
+Chromium
+WebKit
+
+config
+ctx
+desc
+dir
+elem
+err
+len
+msg
+num
+obj
+prev
+proc
+ptr
+req
+res
+str
+tmp
+val
+vars
+
+todo
+href
+lang
+nav
+prev
+next
+toc
+```
+
+```text Example Vale file structure
+  - docs.json
+  - .vale.ini
+  - styles/...
+  - text.md
+```
+
+```text Example monorepo Vale file structure
+  - main.ts
+  - docs/
+    - docs.json
+    - .vale.ini
+    - styles/...
+    - text.md
+  - test/
+```
+
+<Note>
+  Pour des raisons de sécurité, les `stylesPath` absolus ou contenant `..` ne sont pas pris en charge. Utilisez des chemins relatifs et incluez le `stylesPath` dans votre référentiel.
+</Note>
+
+<div id="packages">
+  #### Packages
+</div>
+
+Vale prend en charge un éventail de [packages](https://vale.sh/docs/keys/packages), qui peuvent être utilisés pour détecter les fautes d’orthographe et les erreurs de style.
+Tous les packages que vous incluez dans votre référentiel sous le `stylesPath` approprié sont automatiquement installés et pris en compte dans votre configuration Vale.
+
+Pour les packages qui ne figurent pas dans votre référentiel, vous pouvez spécifier n’importe quels packages depuis le [registre de packages Vale](https://vale.sh/explorer) ; ils sont alors automatiquement téléchargés et utilisés dans votre configuration Vale.
+
+<Note>
+  Veuillez noter que, pour des raisons de sécurité, le téléchargement automatique de packages ne provenant pas du [registre de packages Vale](https://vale.sh/explorer) n’est pas pris en charge.
+</Note>
+
+<div id="vale-with-mdx">
+  #### Vale avec `MDX`
+</div>
+
+Vale ne prend pas en charge `MDX` nativement, mais l’auteur de Vale a fourni une [extension personnalisée](https://github.com/errata-ai/MDX) pour l’ajouter.
+
+Si vous préférez ne pas utiliser cette extension, vous pouvez ajouter les lignes suivantes au fichier `.vale.ini` configuré :
+
+```ini
+[formats]
+mdx = md
+
+[*.mdx]
+CommentDelimiters = {/*, */}
+
+TokenIgnores = (?sm)((?:import|export) .+?$), \
+(?<!`)(<\w+ ?.+ ?\/>)(?!`), \
+(<[A-Z]\w+>.+?<\/[A-Z]\w+>)
+
+BlockIgnores = (?sm)^(<\w+\n .*\s\/>)$, \
+(?sm)^({.+.*})
+```
+
+Pour utiliser les commentaires dans le document de Vale, utilisez des commentaires au format MDX `{/* ... */}`. Si vous utilisez le [paramètre](https://vale.sh/docs/keys/commentdelimiters) `CommentDelimiters = {/*, */}` dans votre configuration, Vale interprétera automatiquement ces commentaires lors de l’analyse. Cela signifie que vous pouvez facilement utiliser les fonctionnalités intégrées de Vale, comme ignorer des lignes ou des sections.
+
+```mdx
+{/* vale off */}
+
+Ce texte est ignoré par Vale
+
+{/* vale on */}
+```
+
+Si vous choisissez de ne pas utiliser `CommentDelimiters` tout en utilisant les commentaires de Vale, vous devez entourer tous les commentaires de Vale de commentaires MDX `{/* ... */}`. Par exemple :
+
+```mdx
+{/* <!-- vale off --> */}
+
+Ce texte est ignoré par Vale
+
+{/* <!-- vale on --> */}
+```
+
+Ces balises de commentaire ne sont pas prises en charge dans les composants Mintlify, mais elles fonctionneront correctement partout au niveau de base d’un document.
