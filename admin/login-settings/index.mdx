@@ -1,0 +1,56 @@
+---
+title: Admin login & settings
+description: How admins and participants access Pulse, reset passwords, and manage account roles.
+icon: key-round
+---
+
+<Callout variant="note" title="What’s covered">
+  Sign-in paths (password vs. SSO), resetting passwords, managing admins/guest users, and fixing account assignments.
+</Callout>
+
+## Quick links
+
+<CardGroup>
+  <Card title="Log in to Pulse" href="/shared/login/log-in-to-pulse-feedback" icon="log-in">
+    Find or confirm your company URL and choose password or SSO login.
+  </Card>
+  <Card title="Change your password" href="/shared/login/change-your-password" icon="key-round">
+    Reset your password when using email/password (not SSO).
+  </Card>
+  <Card title="Single Sign-on (SSO)" href="/shared/login/single-sign-on-sso" icon="shield">
+    Understand SSO behavior, redirects, and enablement requirements.
+  </Card>
+  <Card title="Manage administrators" href="/admin/login-settings/other-settings/add-and-manage-administrators" icon="shield-check">
+    Grant or revoke admin rights and keep ownership clear.
+  </Card>
+  <Card title="Invite guest users" href="/admin/login-settings/other-settings/add-and-manage-guest-users" icon="user-plus">
+    Give limited access for specific surveys or reviews.
+  </Card>
+  <Card title="Fix account assignments" href="/admin/login-settings/other-settings/fix-incorrect-team-assignments" icon="users">
+    Correct teams/managers when a user is misassigned.
+  </Card>
+</CardGroup>
+
+## Set up a secure login baseline
+
+<Steps>
+  <Step title="Confirm the company URL">
+    Pulse access starts from `https://COMPANYNAME.start-pulse.com`. Share this in onboardings so users skip search errors.
+  </Step>
+  <Step title="Choose SSO or password">
+    If SSO is available, users will be redirected to your identity provider. Otherwise, they use email + password.
+  </Step>
+  <Step title="Enforce password hygiene">
+    Remind password users about length/complexity rules and how to change their password inside Profile.
+  </Step>
+  <Step title="Define admin/guest policy">
+    Keep a short list of admins with clear ownership and grant guest access only when needed for specific surveys.
+  </Step>
+  <Step title="Monitor assignments">
+    Periodically review team/manager mappings to avoid visibility errors and survey misrouting.
+  </Step>
+</Steps>
+
+<Callout variant="note" title="GIF to capture">
+  Short clip: visiting the company Pulse URL → SSO redirect → landing in the app home. Keep under 15s.
+</Callout>

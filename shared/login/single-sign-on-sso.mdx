@@ -1,0 +1,35 @@
+---
+title: Single Sign-on (SSO)
+description: Account access guide that shows how single sign-on (sso) works.
+icon: key-round
+---
+
+[Source](https://www.start-pulse.com/en/resources/help/login-settings/login/what-is-single-sign-on-sso)
+
+Single Sign-on (SSO) lets users access Pulse with their existing company credentials. After authenticating once with your identity provider (IdP), Pulse signs you in automatically.
+
+<Callout variant="info" title="What users experience">
+  - Start at `https://COMPANYNAME.start-pulse.com`  
+  - Redirect to your company IdP (e.g., Azure AD, Okta)  
+  - Return to Pulse already authenticated
+</Callout>
+
+<Steps>
+  <Step title="Check if SSO is enabled">
+    If your Pulse URL redirects to your company login, SSO is active. Otherwise, you will see the Pulse email/password screen.
+  </Step>
+  <Step title="Sign in via your IdP">
+    Enter your regular company credentials and complete MFA if required.
+  </Step>
+  <Step title="Land in Pulse">
+    You are returned to Pulse without creating a separate password.
+  </Step>
+</Steps>
+
+<Callout variant="warning" title="Admin setup needed">
+  SSO requires configuration with your IdP and may incur an additional charge. Contact Pulse to enable it and provide metadata (entity ID, ACS URLs, certificates) as requested.
+</Callout>
+
+<Callout variant="note" title="GIF to capture">
+  10–15s clip: open Pulse URL → IdP login → redirected back to Pulse dashboard.
+</Callout>

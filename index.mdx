@@ -1,75 +1,84 @@
 ---
-title: "Introduction"
-description: "Meet the next generation of documentation. AI-native, beautiful out-of-the-box, and built for developers."
-mode: "frame"
-keywords: ["overview", "platform", "getting started", "features"]
+title: Pulse Help Center
+description: Explains how pulse help center works inside Pulse.
+mode: center
 ---
 
-export const HeroCard = ({ filename, title, description, href }) => {
-  return (
-    <a className="group cursor-pointer pb-8" href={href}>
-      <img
-        src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}.png`}
-        className="block dark:hidden pointer-events-none group-hover:scale-105 transition-all duration-100"
-      />
-      <img
-        src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}-dark.png`}
-        className="pointer-events-none group-hover:scale-105 transition-all duration-100 hidden dark:block"
-      />
-      <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">
-        {title}
-      </h3>
-      <span className="mt-1.5">{description}</span>
-    </a>
-  );
-};
+<Callout variant="info" title="How to use these docs">
+  Pick your role tab (Admins or Participants), then open a topic to see quick intros, step-by-step guides, and where we still need short GIF clips.
+</Callout>
 
-<div className="relative">
-  <div className="absolute top-0 left-0 right-0">
-    <img
-      src="/images/hero/background-light.png"
-      className="block dark:hidden pointer-events-none"
-      alt="Decorative background image."
-    />
-    <img
-      src="/images/hero/background-dark.png"
-      className="hidden dark:block pointer-events-none"
-      alt="Decorative background image."
-    />
-  </div>
+<CardGroup>
+  <Card
+    icon="settings"
+    title="Managing surveys"
+    href="/help/managing-surveys/index"
+    cta="Set up, edit, and reuse surveys"
+  >
+    Everything admins need to plan surveys, manage participants, questions, and
+    comment workflows.
+  </Card>
+  <Card
+    icon="users"
+    title="Team feedback"
+    href="/help/team-feedback/index"
+    cta="Guide teams through the process"
+  >
+    Explain the employee experience, visibility rules, and how to work with
+    team-level results.
+  </Card>
+  <Card
+    icon="message-circle"
+    title="Peer feedback"
+    href="/help/peer-feedback/index"
+    cta="Coach a 360° program"
+  >
+    Share best practices for giving feedback, reading scores, and running
+    workshops.
+  </Card>
+  <Card
+    icon="shield"
+    title="Security & privacy"
+    href="/help/security-privacy/index"
+    cta="Answer compliance questions"
+  >
+    Pulse’s approach to data protection, GDPR compliance, encryption, and
+    retention.
+  </Card>
+  <Card
+    icon="key-round"
+    title="Login & profile"
+    href="/help/login-settings/index"
+    cta="Account, SSO, and admin rights"
+  >
+    Troubleshoot sign-in issues, profile settings, and managing administrators
+    or guest users.
+  </Card>
+  <Card
+    icon="sparkles"
+    title="The Pulse method"
+    href="/help/the-pulse-method/index"
+    cta="Share the why behind Pulse"
+  >
+    Help leaders understand when to use team feedback vs. peer feedback and how
+    often to run it.
+  </Card>
+</CardGroup>
 
-  <div className="relative z-10 px-4 py-16 lg:py-48 lg:pb-24 max-w-3xl mx-auto">
-    <h1 className="block text-4xl font-medium text-center text-gray-900 dark:text-zinc-50 tracking-tight">
-      Documentation
-    </h1>
+<Callout variant="note" title="GIF to capture">
+  Short clip scrolling the home page and opening a doc page to show the layout (navbar, steps, callouts).
+</Callout>
 
-    <div className="max-w-xl mx-auto px-4 mt-4 text-lg text-center text-gray-500 dark:text-zinc-500">
-      Meet the next generation of documentation. AI-native, beautiful out-of-the-box, and built for developers and teams.
-    </div>
+---
 
-    <div className="px-6 lg:px-0 mt-12 lg:mt-24 grid sm:grid-cols-2 gap-x-6 gap-y-4">
-      <HeroCard filename="rocket" title="Quickstart" description="Deploy your first docs site in minutes with our step-by-step guide" href="/quickstart" />
+## How this site is organized
 
-      <HeroCard
-        filename="cli"
-        title="CLI installation"
-        description="Install the CLI to preview and develop your docs locally"
-        href="/installation"
-      />
+- **Help tab only** – everything Pulse shared lives in one tab so it feels like an embedded help center inside ClaraDocs.
+- **Consistent components** – all articles use Mintlify callouts, cards, and typography so that embedded views feel native to your app.
+- **Search-first** – every page includes metadata and clear titles, which powers in-app search and contextual “?” tooltips.
 
-      <HeroCard
-        filename="editor"
-        title="Web editor"
-        description="Make quick updates and manage content with our browser-based editor"
-        href="/editor"
-      />
+---
 
-      <HeroCard
-        filename="components"
-        title="Components"
-        description="Build rich, interactive documentation with our ready-to-use components"
-        href="/text"
-      />
-    </div>
-  </div>
-</div>
+## Looking for something specific?
+
+Use the search bar in the navigation or type `Cmd/Ctrl + K` anywhere in the docs to jump directly to an article. Each category page groups common journeys (like setting up surveys or moderating comments) so you can browse when you’re not sure what to search for.

@@ -1,1720 +1,346 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
-  "name": "Mintlify",
-  "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
+  "theme": "aspen",
+  "name": "Pulse Help Center",
+  "seo": {
+    "metatags": {
+      "canonical": "https://www.start-pulse.com/en/resources/help"
+    }
   },
-  "favicon": "/favicon.ico",
+  "colors": {
+    "light": "#0166CC",
+    "primary": "#0166CC",
+    "dark": "#0166CC"
+  },
+  "background": {
+    "decoration": "gradient"
+  },
+  "favicon": "/images/favicon.svg",
   "icons": {
     "library": "lucide"
   },
-  "interaction": {
-    "drilldown": false
-  },
-  "navigation": {
-    "languages": [
-      {
-        "tabs": [
-          {
-            "tab": "Documentation",
-            "groups": [
-              {
-                "group": "Get started",
-                "icon": "rocket",
-                "pages": [
-                  "index",
-                  "quickstart",
-                  "installation",
-                  "editor",
-                  "ai-native",
-                  "migration"
-                ]
-              },
-              {
-                "group": "Organize",
-                "icon": "map",
-                "pages": [
-                  "organize/settings",
-                  "organize/navigation",
-                  "organize/pages",
-                  "organize/hidden-pages"
-                ]
-              },
-              {
-                "group": "Customize",
-                "icon": "paint-bucket",
-                "pages": [
-                  "customize/custom-domain",
-                  "customize/themes",
-                  "customize/fonts",
-                  "customize/custom-scripts",
-                  "customize/react-components",
-                  {
-                    "group": "Dashboard access",
-                    "pages": [
-                      "dashboard/sso",
-                      "dashboard/permissions",
-                      "dashboard/roles"
-                    ]
-                  },
-                  "customize/custom-404-page"
-                ]
-              },
-              {
-                "group": "Create content",
-                "icon": "pen-line",
-                "pages": [
-                  "create/text",
-                  "create/code",
-                  "create/image-embeds",
-                  "create/files",
-                  "create/list-table",
-                  {
-                    "group": "Components",
-                    "pages": [
-                      "components/accordions",
-                      "components/badge",
-                      "components/banner",
-                      "components/callouts",
-                      "components/cards",
-                      "components/code-groups",
-                      "components/columns",
-                      "components/examples",
-                      "components/expandables",
-                      "components/fields",
-                      "components/frames",
-                      "components/icons",
-                      "components/mermaid-diagrams",
-                      "components/panel",
-                      "components/responses",
-                      "components/steps",
-                      "components/tabs",
-                      "components/tooltips",
-                      "components/update",
-                      "components/view"
-                    ]
-                  },
-                  "create/reusable-snippets",
-                  "create/redirects",
-                  "create/changelogs"
-                ]
-              },
-              {
-                "group": "Document APIs",
-                "icon": "file-json",
-                "pages": [
-                  "api-playground/overview",
-                  "api-playground/openapi-setup",
-                  "api-playground/complex-data-types",
-                  "api-playground/adding-sdk-examples",
-                  "api-playground/managing-page-visibility",
-                  "api-playground/multiple-responses",
-                  "api-playground/mdx-setup",
-                  "api-playground/asyncapi-setup",
-                  "api-playground/troubleshooting"
-                ]
-              },
-              {
-                "group": "Deploy",
-                "icon": "boxes",
-                "pages": [
-                  "deploy/deployments",
-                  "deploy/preview-deployments",
-                  {
-                    "group": "Custom subdirectory",
-                    "pages": [
-                      "deploy/cloudflare",
-                      "deploy/route53-cloudfront",
-                      "deploy/vercel",
-                      "deploy/reverse-proxy",
-                      "deploy/csp-configuration"
-                    ]
-                  },
-                  "deploy/authentication-setup",
-                  "deploy/personalization-setup",
-                  "deploy/monorepo",
-                  "deploy/ci",
-                  "deploy/github",
-                  "deploy/gitlab"
-                ]
-              },
-              {
-                "group": "Optimize",
-                "icon": "wrench",
-                "pages": [
-                  {
-                    "group": "AI",
-                    "pages": [
-                      "ai/assistant",
-                      "ai/agent",
-                      "ai/llmstxt",
-                      "ai/contextual-menu",
-                      "ai/model-context-protocol",
-                      "ai/markdown-export"
-                    ]
-                  },
-                  {
-                    "group": "Insights",
-                    "pages": [
-                      "insights/overview",
-                      "insights/feedback"
-                    ]
-                  },
-                  "optimize/seo",
-                  "optimize/pdf-exports",
-                  {
-                    "group": "Integrations",
-                    "pages": [
-                      {
-                        "group": "Analytics",
-                        "pages": [
-                          "integrations/analytics/overview",
-                          "integrations/analytics/amplitude",
-                          "integrations/analytics/clarity",
-                          "integrations/analytics/clearbit",
-                          "integrations/analytics/fathom",
-                          "integrations/analytics/google-analytics",
-                          "integrations/analytics/google-tag-manager",
-                          "integrations/analytics/heap",
-                          "integrations/analytics/hightouch",
-                          "integrations/analytics/hotjar",
-                          "integrations/analytics/logrocket",
-                          "integrations/analytics/mixpanel",
-                          "integrations/analytics/pirsch",
-                          "integrations/analytics/plausible",
-                          "integrations/analytics/posthog",
-                          "integrations/analytics/segment"
-                        ]
-                      },
-                      {
-                        "group": "SDKs",
-                        "pages": [
-                          "integrations/sdks/speakeasy",
-                          "integrations/sdks/stainless"
-                        ]
-                      },
-                      {
-                        "group": "Support",
-                        "pages": [
-                          "integrations/support/overview",
-                          "integrations/support/intercom",
-                          "integrations/support/front"
-                        ]
-                      },
-                      {
-                        "group": "Privacy",
-                        "pages": [
-                          "integrations/privacy/overview",
-                          "integrations/privacy/osano"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Guides",
-            "groups": [
-              {
-                "group": "AI",
-                "icon": "bot",
-                "pages": [
-                  "guides/automate-agent",
-                  "guides/assistant-embed",
-                  "guides/claude-code",
-                  "guides/cursor",
-                  "guides/geo",
-                  "guides/windsurf"
-                ]
-              },
-              {
-                "group": "API docs",
-                "icon": "file-json",
-                "pages": [
-                  "guides/migrating-from-mdx"
-                ]
-              },
-              {
-                "group": "Best practices",
-                "icon": "trophy",
-                "pages": [
-                  "guides/accessibility",
-                  "guides/content-types",
-                  "guides/improving-docs",
-                  "guides/maintenance",
-                  "guides/media",
-                  "guides/navigation",
-                  "guides/seo",
-                  "guides/style-and-tone",
-                  "guides/understand-your-audience"
-                ]
-              },
-              {
-                "group": "Git",
-                "icon": "git-merge",
-                "pages": [
-                  "guides/git-concepts",
-                  "guides/branches"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "API reference",
-            "groups": [
-              {
-                "group": "API reference",
-                "icon": "file-json",
-                "pages": [
-                  "api/introduction"
-                ]
-              },
-              {
-                "group": "Admin",
-                "icon": "activity",
-                "pages": [
-                  "api/update/trigger",
-                  "api/update/status"
-                ]
-              },
-              {
-                "group": "Agent",
-                "icon": "pen-line",
-                "pages": [
-                  "api/agent/create-agent-job",
-                  "api/agent/get-agent-job",
-                  "api/agent/get-all-jobs"
-                ]
-              },
-              {
-                "group": "Assistant",
-                "icon": "bot-message-square",
-                "pages": [
-                  "api/assistant/create-assistant-message",
-                  "api/assistant/search"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Changelog",
-            "groups": [
-              {
-                "group": "Changelog",
-                "icon": "calendar",
-                "pages": [
-                  "changelog"
-                ]
-              }
-            ]
-          }
-        ],
-        "language": "en"
-      },
-      {
-        "tabs": [
-          {
-            "tab": "文档",
-            "groups": [
-              {
-                "group": "开始使用",
-                "icon": "rocket",
-                "pages": [
-                  "zh/index",
-                  "zh/quickstart",
-                  "zh/installation",
-                  "zh/editor",
-                  "zh/ai-native",
-                  "zh/migration"
-                ]
-              },
-              {
-                "group": "组织",
-                "icon": "map",
-                "pages": [
-                  "zh/organize/settings",
-                  "zh/organize/navigation",
-                  "zh/organize/pages",
-                  "zh/organize/hidden-pages"
-                ]
-              },
-              {
-                "group": "自定义",
-                "icon": "paint-bucket",
-                "pages": [
-                  "zh/customize/custom-domain",
-                  "zh/customize/themes",
-                  "zh/customize/fonts",
-                  "zh/customize/custom-scripts",
-                  "zh/customize/react-components",
-                  {
-                    "group": "控制台访问",
-                    "pages": [
-                      "zh/dashboard/sso",
-                      "zh/dashboard/permissions",
-                      "zh/dashboard/roles"
-                    ]
-                  },
-                  "zh/customize/custom-404-page"
-                ]
-              },
-              {
-                "group": "创建对象",
-                "icon": "pen-line",
-                "pages": [
-                  "zh/create/text",
-                  "zh/create/code",
-                  "zh/create/image-embeds",
-                  "zh/create/files",
-                  "zh/create/list-table",
-                  {
-                    "group": "组件",
-                    "pages": [
-                      "zh/components/accordions",
-                      "zh/components/badge",
-                      "zh/components/banner",
-                      "zh/components/callouts",
-                      "zh/components/cards",
-                      "zh/components/code-groups",
-                      "zh/components/columns",
-                      "zh/components/examples",
-                      "zh/components/expandables",
-                      "zh/components/fields",
-                      "zh/components/frames",
-                      "zh/components/icons",
-                      "zh/components/mermaid-diagrams",
-                      "zh/components/panel",
-                      "zh/components/responses",
-                      "zh/components/steps",
-                      "zh/components/tabs",
-                      "zh/components/tooltips",
-                      "zh/components/update",
-                      "zh/components/view"
-                    ]
-                  },
-                  "zh/create/reusable-snippets",
-                  "zh/create/redirects",
-                  "zh/create/changelogs"
-                ]
-              },
-              {
-                "group": "文档 API",
-                "icon": "file-json",
-                "pages": [
-                  "zh/api-playground/overview",
-                  "zh/api-playground/openapi-setup",
-                  "zh/api-playground/complex-data-types",
-                  "zh/api-playground/adding-sdk-examples",
-                  "zh/api-playground/managing-page-visibility",
-                  "zh/api-playground/multiple-responses",
-                  "zh/api-playground/mdx-setup",
-                  "zh/api-playground/asyncapi-setup",
-                  "zh/api-playground/troubleshooting"
-                ]
-              },
-              {
-                "group": "部署",
-                "icon": "boxes",
-                "pages": [
-                  "zh/deploy/deployments",
-                  "zh/deploy/preview-deployments",
-                  {
-                    "group": "自定义子目录",
-                    "pages": [
-                      "zh/deploy/cloudflare",
-                      "zh/deploy/route53-cloudfront",
-                      "zh/deploy/vercel",
-                      "zh/deploy/reverse-proxy",
-                      "zh/deploy/csp-configuration"
-                    ]
-                  },
-                  "zh/deploy/authentication-setup",
-                  "zh/deploy/personalization-setup",
-                  "zh/deploy/monorepo",
-                  "zh/deploy/ci",
-                  "zh/deploy/github",
-                  "zh/deploy/gitlab"
-                ]
-              },
-              {
-                "group": "优化",
-                "icon": "wrench",
-                "pages": [
-                  {
-                    "group": "人工智能",
-                    "pages": [
-                      "zh/ai/assistant",
-                      "zh/ai/agent",
-                      "zh/ai/llmstxt",
-                      "zh/ai/contextual-menu",
-                      "zh/ai/model-context-protocol",
-                      "zh/ai/markdown-export"
-                    ]
-                  },
-                  {
-                    "group": "洞察",
-                    "pages": [
-                      "zh/insights/overview",
-                      "zh/insights/feedback"
-                    ]
-                  },
-                  "zh/optimize/seo",
-                  "zh/optimize/pdf-exports",
-                  {
-                    "group": "集成",
-                    "pages": [
-                      {
-                        "group": "Analytics",
-                        "pages": [
-                          "zh/integrations/analytics/overview",
-                          "zh/integrations/analytics/amplitude",
-                          "zh/integrations/analytics/clarity",
-                          "zh/integrations/analytics/clearbit",
-                          "zh/integrations/analytics/fathom",
-                          "zh/integrations/analytics/google-analytics",
-                          "zh/integrations/analytics/google-tag-manager",
-                          "zh/integrations/analytics/heap",
-                          "zh/integrations/analytics/hightouch",
-                          "zh/integrations/analytics/hotjar",
-                          "zh/integrations/analytics/logrocket",
-                          "zh/integrations/analytics/mixpanel",
-                          "zh/integrations/analytics/pirsch",
-                          "zh/integrations/analytics/plausible",
-                          "zh/integrations/analytics/posthog",
-                          "zh/integrations/analytics/segment"
-                        ]
-                      },
-                      {
-                        "group": "SDK",
-                        "pages": [
-                          "zh/integrations/sdks/speakeasy",
-                          "zh/integrations/sdks/stainless"
-                        ]
-                      },
-                      {
-                        "group": "支持",
-                        "pages": [
-                          "zh/integrations/support/overview",
-                          "zh/integrations/support/intercom",
-                          "zh/integrations/support/front"
-                        ]
-                      },
-                      {
-                        "group": "隐私",
-                        "pages": [
-                          "zh/integrations/privacy/overview",
-                          "zh/integrations/privacy/osano"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "指南",
-            "groups": [
-              {
-                "group": "人工智能",
-                "icon": "bot",
-                "pages": [
-                  "zh/guides/automate-agent",
-                  "zh/guides/assistant-embed",
-                  "zh/guides/claude-code",
-                  "zh/guides/cursor",
-                  "zh/guides/geo",
-                  "zh/guides/windsurf"
-                ]
-              },
-              {
-                "group": "API 文档",
-                "icon": "file-json",
-                "pages": [
-                  "zh/guides/migrating-from-mdx"
-                ]
-              },
-              {
-                "group": "最佳实践",
-                "icon": "trophy",
-                "pages": [
-                  "zh/guides/accessibility",
-                  "zh/guides/content-types",
-                  "zh/guides/improving-docs",
-                  "zh/guides/maintenance",
-                  "zh/guides/media",
-                  "zh/guides/navigation",
-                  "zh/guides/seo",
-                  "zh/guides/style-and-tone",
-                  "zh/guides/understand-your-audience"
-                ]
-              },
-              {
-                "group": "Git",
-                "icon": "git-merge",
-                "pages": [
-                  "zh/guides/git-concepts",
-                  "zh/guides/branches"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "API 参考文档",
-            "groups": [
-              {
-                "group": "API 参考",
-                "icon": "file-json",
-                "pages": [
-                  "zh/api/introduction"
-                ]
-              },
-              {
-                "group": "管理员",
-                "icon": "activity",
-                "pages": [
-                  "zh/api/update/trigger",
-                  "zh/api/update/status"
-                ]
-              },
-              {
-                "group": "代理",
-                "icon": "pen-line",
-                "pages": [
-                  "zh/api/agent/create-agent-job",
-                  "zh/api/agent/get-agent-job",
-                  "zh/api/agent/get-all-jobs"
-                ]
-              },
-              {
-                "group": "AI 助手",
-                "icon": "bot-message-square",
-                "pages": [
-                  "zh/api/assistant/create-assistant-message",
-                  "zh/api/assistant/search"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "更新日志",
-            "groups": [
-              {
-                "group": "更新日志",
-                "icon": "calendar",
-                "pages": [
-                  "zh/changelog"
-                ]
-              }
-            ]
-          }
-        ],
-        "language": "zh"
-      },
-      {
-        "tabs": [
-          {
-            "tab": "Documentación",
-            "groups": [
-              {
-                "group": "Comenzar",
-                "icon": "rocket",
-                "pages": [
-                  "es/index",
-                  "es/quickstart",
-                  "es/installation",
-                  "es/editor",
-                  "es/ai-native",
-                  "es/migration"
-                ]
-              },
-              {
-                "group": "Organizar",
-                "icon": "map",
-                "pages": [
-                  "es/organize/settings",
-                  "es/organize/navigation",
-                  "es/organize/pages",
-                  "es/organize/hidden-pages"
-                ]
-              },
-              {
-                "group": "Personalizar",
-                "icon": "paint-bucket",
-                "pages": [
-                  "es/customize/custom-domain",
-                  "es/customize/themes",
-                  "es/customize/fonts",
-                  "es/customize/custom-scripts",
-                  "es/customize/react-components",
-                  {
-                    "group": "Acceso al dashboard",
-                    "pages": [
-                      "es/dashboard/sso",
-                      "es/dashboard/permissions",
-                      "es/dashboard/roles"
-                    ]
-                  },
-                  "es/customize/custom-404-page"
-                ]
-              },
-              {
-                "group": "Crear contenido",
-                "icon": "pen-line",
-                "pages": [
-                  "es/create/text",
-                  "es/create/code",
-                  "es/create/image-embeds",
-                  "es/create/files",
-                  "es/create/list-table",
-                  {
-                    "group": "Componentes",
-                    "pages": [
-                      "es/components/accordions",
-                      "es/components/badge",
-                      "es/components/banner",
-                      "es/components/callouts",
-                      "es/components/cards",
-                      "es/components/code-groups",
-                      "es/components/columns",
-                      "es/components/examples",
-                      "es/components/expandables",
-                      "es/components/fields",
-                      "es/components/frames",
-                      "es/components/icons",
-                      "es/components/mermaid-diagrams",
-                      "es/components/panel",
-                      "es/components/responses",
-                      "es/components/steps",
-                      "es/components/tabs",
-                      "es/components/tooltips",
-                      "es/components/update",
-                      "es/components/view"
-                    ]
-                  },
-                  "es/create/reusable-snippets",
-                  "es/create/redirects",
-                  "es/create/changelogs"
-                ]
-              },
-              {
-                "group": "Documentar APIs",
-                "icon": "file-json",
-                "pages": [
-                  "es/api-playground/overview",
-                  "es/api-playground/openapi-setup",
-                  "es/api-playground/complex-data-types",
-                  "es/api-playground/adding-sdk-examples",
-                  "es/api-playground/managing-page-visibility",
-                  "es/api-playground/multiple-responses",
-                  "es/api-playground/mdx-setup",
-                  "es/api-playground/asyncapi-setup",
-                  "es/api-playground/troubleshooting"
-                ]
-              },
-              {
-                "group": "Implementar",
-                "icon": "boxes",
-                "pages": [
-                  "es/deploy/deployments",
-                  "es/deploy/preview-deployments",
-                  {
-                    "group": "Subdirectorio personalizado",
-                    "pages": [
-                      "es/deploy/cloudflare",
-                      "es/deploy/route53-cloudfront",
-                      "es/deploy/vercel",
-                      "es/deploy/reverse-proxy",
-                      "es/deploy/csp-configuration"
-                    ]
-                  },
-                  "es/deploy/authentication-setup",
-                  "es/deploy/personalization-setup",
-                  "es/deploy/monorepo",
-                  "es/deploy/ci",
-                  "es/deploy/github",
-                  "es/deploy/gitlab"
-                ]
-              },
-              {
-                "group": "Optimizar",
-                "icon": "wrench",
-                "pages": [
-                  {
-                    "group": "IA",
-                    "pages": [
-                      "es/ai/assistant",
-                      "es/ai/agent",
-                      "es/ai/llmstxt",
-                      "es/ai/contextual-menu",
-                      "es/ai/model-context-protocol",
-                      "es/ai/markdown-export"
-                    ]
-                  },
-                  {
-                    "group": "Información detallada",
-                    "pages": [
-                      "es/insights/overview",
-                      "es/insights/feedback"
-                    ]
-                  },
-                  "es/optimize/seo",
-                  "es/optimize/pdf-exports",
-                  {
-                    "group": "Integraciones",
-                    "pages": [
-                      {
-                        "group": "Analytics",
-                        "pages": [
-                          "es/integrations/analytics/overview",
-                          "es/integrations/analytics/amplitude",
-                          "es/integrations/analytics/clarity",
-                          "es/integrations/analytics/clearbit",
-                          "es/integrations/analytics/fathom",
-                          "es/integrations/analytics/google-analytics",
-                          "es/integrations/analytics/google-tag-manager",
-                          "es/integrations/analytics/heap",
-                          "es/integrations/analytics/hightouch",
-                          "es/integrations/analytics/hotjar",
-                          "es/integrations/analytics/logrocket",
-                          "es/integrations/analytics/mixpanel",
-                          "es/integrations/analytics/pirsch",
-                          "es/integrations/analytics/plausible",
-                          "es/integrations/analytics/posthog",
-                          "es/integrations/analytics/segment"
-                        ]
-                      },
-                      {
-                        "group": "SDK",
-                        "pages": [
-                          "es/integrations/sdks/speakeasy",
-                          "es/integrations/sdks/stainless"
-                        ]
-                      },
-                      {
-                        "group": "Soporte",
-                        "pages": [
-                          "es/integrations/support/overview",
-                          "es/integrations/support/intercom",
-                          "es/integrations/support/front"
-                        ]
-                      },
-                      {
-                        "group": "Privacidad",
-                        "pages": [
-                          "es/integrations/privacy/overview",
-                          "es/integrations/privacy/osano"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Guías",
-            "groups": [
-              {
-                "group": "IA",
-                "icon": "bot",
-                "pages": [
-                  "es/guides/automate-agent",
-                  "es/guides/assistant-embed",
-                  "es/guides/claude-code",
-                  "es/guides/cursor",
-                  "es/guides/geo",
-                  "es/guides/windsurf"
-                ]
-              },
-              {
-                "group": "Documentación de la API",
-                "icon": "file-json",
-                "pages": [
-                  "es/guides/migrating-from-mdx"
-                ]
-              },
-              {
-                "group": "Mejores prácticas",
-                "icon": "trophy",
-                "pages": [
-                  "es/guides/accessibility",
-                  "es/guides/content-types",
-                  "es/guides/improving-docs",
-                  "es/guides/maintenance",
-                  "es/guides/media",
-                  "es/guides/navigation",
-                  "es/guides/seo",
-                  "es/guides/style-and-tone",
-                  "es/guides/understand-your-audience"
-                ]
-              },
-              {
-                "group": "Git",
-                "icon": "git-merge",
-                "pages": [
-                  "es/guides/git-concepts",
-                  "es/guides/branches"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Referencia de API",
-            "groups": [
-              {
-                "group": "Referencia de la API",
-                "icon": "file-json",
-                "pages": [
-                  "es/api/introduction"
-                ]
-              },
-              {
-                "group": "Administrador",
-                "icon": "activity",
-                "pages": [
-                  "es/api/update/trigger",
-                  "es/api/update/status"
-                ]
-              },
-              {
-                "group": "Agente",
-                "icon": "pen-line",
-                "pages": [
-                  "es/api/agent/create-agent-job",
-                  "es/api/agent/get-agent-job",
-                  "es/api/agent/get-all-jobs"
-                ]
-              },
-              {
-                "group": "assistant",
-                "icon": "bot-message-square",
-                "pages": [
-                  "es/api/assistant/create-assistant-message",
-                  "es/api/assistant/search"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Cambios",
-            "groups": [
-              {
-                "group": "Cambios",
-                "icon": "calendar",
-                "pages": [
-                  "es/changelog"
-                ]
-              }
-            ]
-          }
-        ],
-        "language": "es"
-      },
-      {
-        "tabs": [
-          {
-            "tab": "Documentation",
-            "groups": [
-              {
-                "group": "Commencer",
-                "icon": "rocket",
-                "pages": [
-                  "fr/index",
-                  "fr/quickstart",
-                  "fr/installation",
-                  "fr/editor",
-                  "fr/ai-native",
-                  "fr/migration"
-                ]
-              },
-              {
-                "group": "Organiser",
-                "icon": "map",
-                "pages": [
-                  "fr/organize/settings",
-                  "fr/organize/navigation",
-                  "fr/organize/pages",
-                  "fr/organize/hidden-pages"
-                ]
-              },
-              {
-                "group": "Personnaliser",
-                "icon": "paint-bucket",
-                "pages": [
-                  "fr/customize/custom-domain",
-                  "fr/customize/themes",
-                  "fr/customize/fonts",
-                  "fr/customize/custom-scripts",
-                  "fr/customize/react-components",
-                  {
-                    "group": "Accès au Dashboard",
-                    "pages": [
-                      "fr/dashboard/sso",
-                      "fr/dashboard/permissions",
-                      "fr/dashboard/roles"
-                    ]
-                  },
-                  "fr/customize/custom-404-page"
-                ]
-              },
-              {
-                "group": "Créer un objet",
-                "icon": "pen-line",
-                "pages": [
-                  "fr/create/text",
-                  "fr/create/code",
-                  "fr/create/image-embeds",
-                  "fr/create/files",
-                  "fr/create/list-table",
-                  {
-                    "group": "Composants",
-                    "pages": [
-                      "fr/components/accordions",
-                      "fr/components/badge",
-                      "fr/components/banner",
-                      "fr/components/callouts",
-                      "fr/components/cards",
-                      "fr/components/code-groups",
-                      "fr/components/columns",
-                      "fr/components/examples",
-                      "fr/components/expandables",
-                      "fr/components/fields",
-                      "fr/components/frames",
-                      "fr/components/icons",
-                      "fr/components/mermaid-diagrams",
-                      "fr/components/panel",
-                      "fr/components/responses",
-                      "fr/components/steps",
-                      "fr/components/tabs",
-                      "fr/components/tooltips",
-                      "fr/components/update",
-                      "fr/components/view"
-                    ]
-                  },
-                  "fr/create/reusable-snippets",
-                  "fr/create/redirects",
-                  "fr/create/changelogs"
-                ]
-              },
-              {
-                "group": "Documenter des API",
-                "icon": "file-json",
-                "pages": [
-                  "fr/api-playground/overview",
-                  "fr/api-playground/openapi-setup",
-                  "fr/api-playground/complex-data-types",
-                  "fr/api-playground/adding-sdk-examples",
-                  "fr/api-playground/managing-page-visibility",
-                  "fr/api-playground/multiple-responses",
-                  "fr/api-playground/mdx-setup",
-                  "fr/api-playground/asyncapi-setup",
-                  "fr/api-playground/troubleshooting"
-                ]
-              },
-              {
-                "group": "Déployer",
-                "icon": "boxes",
-                "pages": [
-                  "fr/deploy/deployments",
-                  "fr/deploy/preview-deployments",
-                  {
-                    "group": "Sous-répertoire personnalisé",
-                    "pages": [
-                      "fr/deploy/cloudflare",
-                      "fr/deploy/route53-cloudfront",
-                      "fr/deploy/vercel",
-                      "fr/deploy/reverse-proxy",
-                      "fr/deploy/csp-configuration"
-                    ]
-                  },
-                  "fr/deploy/authentication-setup",
-                  "fr/deploy/personalization-setup",
-                  "fr/deploy/monorepo",
-                  "fr/deploy/ci",
-                  "fr/deploy/github",
-                  "fr/deploy/gitlab"
-                ]
-              },
-              {
-                "group": "Optimiser",
-                "icon": "wrench",
-                "pages": [
-                  {
-                    "group": "IA",
-                    "pages": [
-                      "fr/ai/assistant",
-                      "fr/ai/agent",
-                      "fr/ai/llmstxt",
-                      "fr/ai/contextual-menu",
-                      "fr/ai/model-context-protocol",
-                      "fr/ai/markdown-export"
-                    ]
-                  },
-                  {
-                    "group": "Analyses",
-                    "pages": [
-                      "fr/insights/overview",
-                      "fr/insights/feedback"
-                    ]
-                  },
-                  "fr/optimize/seo",
-                  "fr/optimize/pdf-exports",
-                  {
-                    "group": "Intégrations",
-                    "pages": [
-                      {
-                        "group": "Analytics",
-                        "pages": [
-                          "fr/integrations/analytics/overview",
-                          "fr/integrations/analytics/amplitude",
-                          "fr/integrations/analytics/clarity",
-                          "fr/integrations/analytics/clearbit",
-                          "fr/integrations/analytics/fathom",
-                          "fr/integrations/analytics/google-analytics",
-                          "fr/integrations/analytics/google-tag-manager",
-                          "fr/integrations/analytics/heap",
-                          "fr/integrations/analytics/hightouch",
-                          "fr/integrations/analytics/hotjar",
-                          "fr/integrations/analytics/logrocket",
-                          "fr/integrations/analytics/mixpanel",
-                          "fr/integrations/analytics/pirsch",
-                          "fr/integrations/analytics/plausible",
-                          "fr/integrations/analytics/posthog",
-                          "fr/integrations/analytics/segment"
-                        ]
-                      },
-                      {
-                        "group": "SDK",
-                        "pages": [
-                          "fr/integrations/sdks/speakeasy",
-                          "fr/integrations/sdks/stainless"
-                        ]
-                      },
-                      {
-                        "group": "Assistance",
-                        "pages": [
-                          "fr/integrations/support/overview",
-                          "fr/integrations/support/intercom",
-                          "fr/integrations/support/front"
-                        ]
-                      },
-                      {
-                        "group": "Confidentialité",
-                        "pages": [
-                          "fr/integrations/privacy/overview",
-                          "fr/integrations/privacy/osano"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Guides",
-            "groups": [
-              {
-                "group": "IA",
-                "icon": "bot",
-                "pages": [
-                  "fr/guides/automate-agent",
-                  "fr/guides/assistant-embed",
-                  "fr/guides/claude-code",
-                  "fr/guides/cursor",
-                  "fr/guides/geo",
-                  "fr/guides/windsurf"
-                ]
-              },
-              {
-                "group": "Documentation de l’API",
-                "icon": "file-json",
-                "pages": [
-                  "fr/guides/migrating-from-mdx"
-                ]
-              },
-              {
-                "group": "Bonnes pratiques",
-                "icon": "trophy",
-                "pages": [
-                  "fr/guides/accessibility",
-                  "fr/guides/content-types",
-                  "fr/guides/improving-docs",
-                  "fr/guides/maintenance",
-                  "fr/guides/media",
-                  "fr/guides/navigation",
-                  "fr/guides/seo",
-                  "fr/guides/style-and-tone",
-                  "fr/guides/understand-your-audience"
-                ]
-              },
-              {
-                "group": "Git",
-                "icon": "git-merge",
-                "pages": [
-                  "fr/guides/git-concepts",
-                  "fr/guides/branches"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Référence de l’API",
-            "groups": [
-              {
-                "group": "référence de l’API",
-                "icon": "file-json",
-                "pages": [
-                  "fr/api/introduction"
-                ]
-              },
-              {
-                "group": "Admin",
-                "icon": "activity",
-                "pages": [
-                  "fr/api/update/trigger",
-                  "fr/api/update/status"
-                ]
-              },
-              {
-                "group": "Agent",
-                "icon": "pen-line",
-                "pages": [
-                  "fr/api/agent/create-agent-job",
-                  "fr/api/agent/get-agent-job",
-                  "fr/api/agent/get-all-jobs"
-                ]
-              },
-              {
-                "group": "Assistant",
-                "icon": "bot-message-square",
-                "pages": [
-                  "fr/api/assistant/create-assistant-message",
-                  "fr/api/assistant/search"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Journal des modifications",
-            "groups": [
-              {
-                "group": "Journal des modifications",
-                "icon": "calendar",
-                "pages": [
-                  "fr/changelog"
-                ]
-              }
-            ]
-          }
-        ],
-        "language": "fr"
-      }
-    ]
-  },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
-    "href": "https://mintlify.com/docs"
+    "light": "/images/pulse-brand-light-mode.svg",
+    "dark": "/images/pulse-brand-dark-mode.svg"
   },
-  "api": {
-    "mdx": {
-      "auth": {
-        "method": "bearer"
-      }
-    }
+  "appearance": {
+    "default": "system"
   },
   "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Get started",
-      "href": "https://mintlify.com/start"
-    }
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "linkedin": "https://www.linkedin.com/company/mintlify",
-      "github": "https://github.com/mintlify"
-    },
+    "toggle": true,
+    "search_bar": "prominent",
     "links": [
       {
-        "header": "Explore",
-        "items": [
-          {
-            "label": "Startups",
-            "href": "https://www.mintlify.com/startups"
-          },
-          {
-            "label": "Enterprise",
-            "href": "https://www.mintlify.com/enterprise"
-          },
-          {
-            "label": "Switch",
-            "href": "https://www.mintlify.com/switch"
-          }
-        ]
-      },
-      {
-        "header": "Resources",
-        "items": [
-          {
-            "label": "Customers",
-            "href": "https://mintlify.com/customers"
-          },
-          {
-            "label": "Blog",
-            "href": "https://mintlify.com/blog"
-          },
-          {
-            "label": "Pricing",
-            "href": "https://www.mintlify.com/pricing"
-          },
-          {
-            "label": "Contact support",
-            "href": "https://www.mintlify.com/docs/contact-support"
-          },
-          {
-            "label": "Feature Requests",
-            "href": "https://github.com/orgs/mintlify/discussions/categories/feature-requests"
-          },
-          {
-            "label": "Status",
-            "href": "https://www.mintlify.com/docs/status"
-          }
-        ]
-      },
-      {
-        "header": "Company",
-        "items": [
-          {
-            "label": "Careers",
-            "href": "https://mintlify.com/careers"
-          },
-          {
-            "label": "Wall of Love",
-            "href": "https://www.mintlify.com/wall-of-love"
-          }
-        ]
-      },
-      {
-        "header": "Legal",
-        "items": [
-          {
-            "label": "Privacy Policy",
-            "href": "https://mintlify.com/legal/privacy"
-          },
-          {
-            "label": "Terms of Service",
-            "href": "https://mintlify.com/legal/terms"
-          },
-          {
-            "label": "Security",
-            "href": "https://security.mintlify.com/?_gl=1*ascm4x*_gcl_au*NTU1ODkzNjQ0LjE3NTQ5Mjg4NzIuMTgzMDQ5NTExMS4xNzU3NTQwMDk1LjE3NTc1NDAwOTQ."
-          }
-        ]
+        "label": "Visit Pulse",
+        "href": "https://www.start-pulse.com/",
+        "icon": "external-link"
       }
     ]
-  },
-  "thumbnails": {
-    "background": "/images/thumbnail/background.svg"
   },
   "contextual": {
     "options": [
       "copy",
+      "view",
       "chatgpt",
       "claude",
+      "perplexity",
+      "mcp",
       "cursor",
       "vscode"
     ]
   },
-  "redirects": [
-    {
-      "source": "/content/components/accordions",
-      "destination": "/components/accordions"
-    },
-    {
-      "source": "/content/components/callouts",
-      "destination": "/components/callouts"
-    },
-    {
-      "source": "/content/components/cards",
-      "destination": "/components/cards"
-    },
-    {
-      "source": "/content/components/card-groups",
-      "destination": "/components/columns"
-    },
-    {
-      "source": "/content/components/code-groups",
-      "destination": "/components/code-groups"
-    },
-    {
-      "source": "/content/components/examples",
-      "destination": "/components/examples"
-    },
-    {
-      "source": "/content/components/expandables",
-      "destination": "/components/expandables"
-    },
-    {
-      "source": "/content/components/fields",
-      "destination": "/components/fields"
-    },
-    {
-      "source": "/content/components/frames",
-      "destination": "/components/frames"
-    },
-    {
-      "source": "/content/components/icons",
-      "destination": "/components/icons"
-    },
-    {
-      "source": "/content/components/mermaid-diagrams",
-      "destination": "/components/mermaid-diagrams"
-    },
-    {
-      "source": "/content/components/steps",
-      "destination": "/components/steps"
-    },
-    {
-      "source": "/content/components/tabs",
-      "destination": "/components/tabs"
-    },
-    {
-      "source": "/content/components/tooltips",
-      "destination": "/components/tooltips"
-    },
-    {
-      "source": "/content/components/update",
-      "destination": "/components/update"
-    },
-    {
-      "source": "/api-playground/openapi/setup",
-      "destination": "/api-playground/openapi-setup"
-    },
-    {
-      "source": "/api-playground/openapi/writing-openapi",
-      "destination": "/api-playground/openapi-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/authentication-vs-personalization",
-      "destination": "/authentication-personalization/overview"
-    },
-    {
-      "source": "/settings/authentication-personalization/authentication-setup/choosing-a-handshake",
-      "destination": "/authentication-personalization/overview"
-    },
-    {
-      "source": "/settings/authentication-personalization/personalization-setup/choosing-a-handshake",
-      "destination": "/authentication-personalization/overview"
-    },
-    {
-      "source": "/authentication-personalization/personalization-setup",
-      "destination": "/deploy/personalization-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/authentication",
-      "destination": "/deploy/authentication-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/personalization",
-      "destination": "/deploy/personalization-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/partial-authentication",
-      "destination": "/deploy/authentication-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/sending-data",
-      "destination": "/deploy/personalization-setup"
-    },
-    {
-      "source": "/authentication-personalization/partial-authentication-setup",
-      "destination": "/deploy/authentication-setup"
-    },
-    {
-      "source": "/authentication-personalization/sending-data",
-      "destination": "/deploy/personalization-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/authentication-setup/jwt",
-      "destination": "/deploy/authentication-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/authentication-setup/oauth",
-      "destination": "/deploy/authentication-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/authentication-setup/mintlify",
-      "destination": "/deploy/authentication-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/authentication-setup/password",
-      "destination": "/deploy/authentication-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/personalization-setup/jwt",
-      "destination": "/deploy/personalization-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/personalization-setup/oauth",
-      "destination": "/deploy/personalization-setup"
-    },
-    {
-      "source": "/settings/authentication-personalization/personalization-setup/shared-session",
-      "destination": "/deploy/personalization-setup"
-    },
-    {
-      "source": "/ai-ingestion",
-      "destination": "/ai/llmstxt"
-    },
-    {
-      "source": "/api-reference/chat/*",
-      "destination": "/api/assistant/*"
-    },
-    {
-      "source": "/api-reference/*",
-      "destination": "/api/*"
-    },
-    {
-      "source": "/fr/api-reference/*",
-      "destination": "/fr/api/*"
-    },
-    {
-      "source": "/es/api-reference/*",
-      "destination": "/es/api/*"
-    },
-    {
-      "source": "/zh/api-reference/*",
-      "destination": "/zh/api/*"
-    },
-    {
-      "source": "/editor/getting-started",
-      "destination": "/editor"
-    },
-    {
-      "source": "/editor/content-management",
-      "destination": "/editor"
-    },
-    {
-      "source": "/editor/publishing",
-      "destination": "/editor"
-    },
-    {
-      "source": "/editor/keyboard-shortcuts",
-      "destination": "/editor"
-    },
-    {
-      "source": "/editor/troubleshooting",
-      "destination": "/editor"
-    },
-    {
-      "source": "/guides/analytics",
-      "destination": "/insights/overview"
-    },
-    {
-      "source": "/guides/assistant",
-      "destination": "/ai/assistant"
-    },
-    {
-      "source": "/api-playground/customization/adding-sdk-examples",
-      "destination": "/api-playground/adding-sdk-examples"
-    },
-    {
-      "source": "/api-playground/customization/complex-data-types",
-      "destination": "/api-playground/complex-data-types"
-    },
-    {
-      "source": "/api-playground/customization/managing-page-visibility",
-      "destination": "/api-playground/managing-page-visibility"
-    },
-    {
-      "source": "/api-playground/customization/multiple-responses",
-      "destination": "/api-playground/multiple-responses"
-    },
-    {
-      "source": "/settings/broken-links",
-      "destination": "/create/broken-links"
-    },
-    {
-      "source": "/guides/changelogs",
-      "destination": "/create/changelogs"
-    },
-    {
-      "source": "/code",
-      "destination": "/create/code"
-    },
-    {
-      "source": "/components/files",
-      "destination": "/create/files"
-    },
-    {
-      "source": "/image-embeds",
-      "destination": "/create/image-embeds"
-    },
-    {
-      "source": "/list-table",
-      "destination": "/create/list-table"
-    },
-    {
-      "source": "/reusable-snippets",
-      "destination": "/create/reusable-snippets"
-    },
-    {
-      "source": "/text",
-      "destination": "/create/text"
-    },
-    {
-      "source": "/settings/custom-404-page",
-      "destination": "/customize/custom-404-page"
-    },
-    {
-      "source": "/settings/custom-domain",
-      "destination": "/customize/custom-domain"
-    },
-    {
-      "source": "/settings/custom-scripts",
-      "destination": "/customize/custom-scripts"
-    },
-    {
-      "source": "/react-components",
-      "destination": "/customize/react-components"
-    },
-    {
-      "source": "/themes",
-      "destination": "/customize/themes"
-    },
-    {
-      "source": "/advanced/dashboard/permissions",
-      "destination": "/dashboard/permissions"
-    },
-    {
-      "source": "/advanced/dashboard/roles",
-      "destination": "/dashboard/roles"
-    },
-    {
-      "source": "/advanced/dashboard/sso",
-      "destination": "/dashboard/sso"
-    },
-    {
-      "source": "/settings/ci",
-      "destination": "/deploy/ci"
-    },
-    {
-      "source": "/advanced/subpath/cloudflare",
-      "destination": "/deploy/cloudflare"
-    },
-    {
-      "source": "/guides/csp-configuration",
-      "destination": "/deploy/csp-configuration"
-    },
-    {
-      "source": "/guides/deployments",
-      "destination": "/deploy/deployments"
-    },
-    {
-      "source": "/settings/github",
-      "destination": "/deploy/github"
-    },
-    {
-      "source": "/settings/gitlab",
-      "destination": "/deploy/gitlab"
-    },
-    {
-      "source": "/guides/monorepo",
-      "destination": "/deploy/monorepo"
-    },
-    {
-      "source": "/settings/preview-deployments",
-      "destination": "/deploy/preview-deployments"
-    },
-    {
-      "source": "/guides/reverse-proxy",
-      "destination": "/deploy/reverse-proxy"
-    },
-    {
-      "source": "/advanced/subpath/route53-cloudfront",
-      "destination": "/deploy/route53-cloudfront"
-    },
-    {
-      "source": "/advanced/subpath/vercel",
-      "destination": "/deploy/vercel"
-    },
-    {
-      "source": "/editor/branches",
-      "destination": "/guides/branches"
-    },
-    {
-      "source": "/editor/git-concepts",
-      "destination": "/guides/git-concepts"
-    },
-    {
-      "source": "/analytics/improving-docs",
-      "destination": "/guides/improving-docs"
-    },
-    {
-      "source": "/api-playground/migrating-from-mdx",
-      "destination": "/guides/migrating-from-mdx"
-    },
-    {
-      "source": "/guides/migration",
-      "destination": "/migration"
-    },
-    {
-      "source": "/settings/seo",
-      "destination": "/optimize/seo"
-    },
-    {
-      "source": "/guides/hidden-page-example",
-      "destination": "/organize/hidden-page-example"
-    },
-    {
-      "source": "/guides/hidden-pages",
-      "destination": "/organize/hidden-pages"
-    },
-    {
-      "source": "/navigation",
-      "destination": "/organize/navigation"
-    },
-    {
-      "source": "/pages",
-      "destination": "/organize/pages"
-    },
-    {
-      "source": "/settings",
-      "destination": "/organize/settings"
-    },
-    {
-      "source": "/api-playground/mdx/:slug*",
-      "destination": "/api-playground/mdx-setup"
-    },
-    {
-      "source": "/api-playground/asyncapi/setup",
-      "destination": "/api-playground/asyncapi-setup"
-    },
-    {
-      "source": "/create/broken-links",
-      "destination": "/create/redirects"
-    }
-  ],
-  "integrations": {
-    "ga4": {
-      "measurementId": "G-RCYWHL7EQ7"
+  "styling": {
+    "codeblocks": {
+      "theme": {
+        "light": "github-light",
+        "dark": "dracula"
+      }
     }
   },
-  "seo": {
-    "metatags": {
-      "canonical": "https://www.mintlify.com/docs",
-      "google-site-verification": "YRuJgIxsRnMkiRTYTo_tEsJSFyIE3AraEiukTbeV4Ag",
-      "og:locale": "en_US",
-      "twitter:site": "@mintlify"
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Admins",
+        "icon": "settings",
+        "groups": [
+          {
+            "group": "Overview",
+            "icon": "book-open",
+            "pages": [
+              "/index"
+            ]
+          },
+          {
+            "group": "Admin login & settings",
+            "icon": "key-round",
+            "pages": [
+              "/admin/login-settings/index",
+              "/shared/login/change-your-password",
+              "/shared/login/log-in-to-pulse-feedback",
+              "/shared/login/single-sign-on-sso",
+              "/admin/login-settings/other-settings/add-and-manage-administrators",
+              "/admin/login-settings/other-settings/add-and-manage-guest-users",
+              "/admin/login-settings/other-settings/fix-incorrect-team-assignments",
+              "/admin/login-settings/other-settings/guest-users",
+              "/admin/login-settings/other-settings/administrator-rights"
+            ]
+          },
+          {
+            "group": "Managing surveys",
+            "icon": "settings",
+            "pages": [
+              "/admin/managing-surveys/index",
+              "/admin/managing-surveys/comment-moderation/moderate-reported-comments",
+              "/admin/managing-surveys/comment-moderation/best-way-to-handle-inappropriate-comments",
+              "/admin/managing-surveys/e-mail-einstellungen/change-the-text-of-the-invitation-reminder-and-results-emails",
+              "/admin/managing-surveys/e-mail-einstellungen/create-your-own-invitation-reminder-or-results-emails",
+              "/admin/managing-surveys/e-mail-einstellungen/languages-supported-by-pulse",
+              "/admin/managing-surveys/participant-management/team-creation-process",
+              "/admin/managing-surveys/participant-management/assign-a-survey-to-selected-teams-only",
+              "/admin/managing-surveys/participant-management/bulk-edit-participants",
+              "/admin/managing-surveys/participant-management/edit-one-or-more-participants-e-g-change-name-team-or-manager",
+              "/admin/managing-surveys/participant-management/import-participants",
+              "/admin/managing-surveys/question-management/add-your-own-questions",
+              "/admin/managing-surveys/question-management/translation-requirements-for-questions",
+              "/admin/managing-surveys/question-management/add-and-manage-topics",
+              "/admin/managing-surveys/question-management/assign-new-own-questions-to-the-existing-topic-areas",
+              "/admin/managing-surveys/question-management/purpose-of-the-subject-areas",
+              "/admin/managing-surveys/question-management/hidden-questions-across-teams",
+              "/admin/managing-surveys/survey-setup/edit-a-survey-you-set-up-before-it-has-started",
+              "/admin/managing-surveys/survey-setup/make-changes-to-a-survey-if-it-has-already-started",
+              "/admin/managing-surveys/survey-setup/reuse-an-earlier-survey",
+              "/admin/managing-surveys/survey-setup/set-up-a-survey",
+              "/admin/managing-surveys/survey-setup/survey-workflow"
+            ]
+          },
+          {
+            "group": "Security & privacy",
+            "icon": "shield",
+            "pages": [
+              "/admin/security-privacy/index",
+              "/admin/security-privacy/data-protection/as-a-company-upload-our-own-privacy-policy-to-pulse",
+              "/admin/security-privacy/data-protection/employee-consent-requirements-for-data-processing",
+              "/admin/security-privacy/data-protection/pulse-compliance-with-the-eu-dsgvo",
+              "/admin/security-privacy/data-protection/personal-data-retention",
+              "/admin/security-privacy/data-protection/request-deletion-of-personal-files",
+              "/admin/security-privacy/data-protection/personal-data-processed",
+              "/admin/security-privacy/data-protection/protecting-your-privacy",
+              "/admin/security-privacy/security/data-encryption",
+              "/admin/security-privacy/security/data-loss-protection",
+              "/admin/security-privacy/security/pulse-iso-certification",
+              "/admin/security-privacy/security/data-storage-locations"
+            ]
+          },
+          {
+            "group": "The Pulse method",
+            "icon": "sparkles",
+            "pages": [
+              "/admin/the-pulse-method/index",
+              "/admin/the-pulse-method/other-questions/using-pulse-in-agile-organizations",
+              "/admin/the-pulse-method/other-questions/licensing-for-limited-survey-runs",
+              "/admin/the-pulse-method/other-questions/peer-feedback-survey-workflow",
+              "/admin/the-pulse-method/other-questions/team-feedback-survey-workflow",
+              "/admin/the-pulse-method/other-questions/peer-feedback-survey-cadence",
+              "/admin/the-pulse-method/other-questions/team-feedback-survey-cadence",
+              "/admin/the-pulse-method/other-questions/working-environment-definition",
+              "/admin/the-pulse-method/other-questions/importance-of-feedback",
+              "/admin/the-pulse-method/understanding-pulse-feedback/survey-participation-requirements",
+              "/admin/the-pulse-method/understanding-pulse-feedback/pulse-bottom-up-approach",
+              "/admin/the-pulse-method/understanding-pulse-feedback/score-calculation",
+              "/admin/the-pulse-method/understanding-pulse-feedback/pulse-driven-improvements",
+              "/admin/the-pulse-method/understanding-pulse-feedback/pulse-driven-change-momentum",
+              "/admin/the-pulse-method/understanding-pulse-feedback/pulse",
+              "/admin/the-pulse-method/understanding-pulse-feedback/difference-between-pulse-and-other-employee-surveys",
+              "/admin/the-pulse-method/understanding-pulse-feedback/survey-invitees",
+              "/admin/the-pulse-method/understanding-pulse-feedback/transparent-feedback-rationale",
+              "/admin/the-pulse-method/understanding-pulse-feedback/impact-of-answers-on-performance-reviews"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Participants",
+        "icon": "users",
+      "groups": [
+        {
+          "group": "Team feedback",
+          "icon": "users",
+          "pages": [
+              "/participants/team-feedback/index",
+              "/participants/team-feedback/comments/filter-the-comments",
+              "/participants/team-feedback/comments/like-a-comment",
+              "/participants/team-feedback/comments/report-a-comment",
+              "/participants/team-feedback/comments/see-the-comments-for-each-question",
+              "/participants/team-feedback/custom-teams/create-or-edit-a-group",
+              "/participants/team-feedback/feedback-visibility-and-teams/see-the-results-even-if-you-didnt-participate-in-the-survey",
+              "/participants/team-feedback/feedback-visibility-and-teams/team-creation-process",
+              "/participants/team-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
+              "/participants/team-feedback/feedback-visibility-and-teams/team-feedback-visibility",
+              "/participants/team-feedback/feedback-visibility-and-teams/ratings-visibility",
+              "/participants/team-feedback/feedback-visibility-and-teams/survey-participants",
+              "/participants/team-feedback/getting-started/skip-a-question",
+              "/participants/team-feedback/getting-started/survey-cadence",
+              "/participants/team-feedback/getting-started/supported-devices-for-pulse-feedback",
+              "/participants/team-feedback/getting-started/considerations-when-giving-feedback",
+              "/participants/team-feedback/getting-started/find-your-participant-link-for-the-survey",
+              "/participants/team-feedback/giving-feedback/change-your-answers-after-youve-submitted-the-survey",
+              "/participants/team-feedback/giving-feedback/survey-participation-requirements",
+              "/participants/team-feedback/giving-feedback/make-sure-that-your-feedback-is-useful-and-taken-into-account",
+              "/participants/team-feedback/giving-feedback/fix-incorrect-team-assignments",
+              "/participants/team-feedback/giving-feedback/importance-of-feedback",
+              "/participants/team-feedback/results-exports/export-the-survey-data-in-excel-format",
+              "/participants/team-feedback/results-exports/obtain-a-non-anonymous-data-export",
+              "/participants/team-feedback/results-exports/export-the-results",
+              "/participants/team-feedback/results-visibility/make-your-comments-visible-to-people-outside-your-team-with-photo-and-name",
+              "/participants/team-feedback/results-visibility/see-the-distribution-of-the-ratings",
+              "/participants/team-feedback/results-visibility/answer-visibility-duration",
+              "/participants/team-feedback/results-visibility/question-availability-for-participating-teams",
+              "/participants/team-feedback/results-workshops/considerations-to-achieve-a-successful-results-meeting",
+              "/participants/team-feedback/results-workshops/considerations-when-receiving-feedback",
+              "/participants/team-feedback/results-workshops/find-materials-for-the-discussion-of-the-results-in-your-team",
+              "/participants/team-feedback/scores-and-comparisons/compare-the-results-from-different-surveys",
+              "/participants/team-feedback/scores-and-comparisons/compare-the-results-team-scores-from-different-teams",
+              "/participants/team-feedback/scores-and-comparisons/see-the-results-of-a-specific-team",
+              "/participants/team-feedback/scores-and-comparisons/score-calculation",
+              "/participants/team-feedback/scores-and-comparisons/survey-result-availability"
+            ]
+          },
+          {
+            "group": "Peer feedback",
+            "icon": "message-circle",
+            "pages": [
+              "/participants/peer-feedback/index",
+              "/participants/peer-feedback/comments/see-the-comments-for-each-question",
+              "/participants/peer-feedback/feedback-visibility-and-teams/see-who-has-participated-in-your-survey",
+              "/participants/peer-feedback/feedback-visibility-and-teams/answer-visibility-duration",
+              "/participants/peer-feedback/feedback-visibility-and-teams/results-availability-timeline",
+              "/participants/peer-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
+              "/participants/peer-feedback/feedback-visibility-and-teams/rating-visibility",
+              "/participants/peer-feedback/feedback-visibility-and-teams/peer-feedback-visibility",
+              "/participants/peer-feedback/getting-started/peer-feedback-survey-window-and-extensions",
+              "/participants/peer-feedback/getting-started/survey-invitation-limits",
+              "/participants/peer-feedback/getting-started/supported-devices-for-pulse",
+              "/participants/peer-feedback/getting-started/considerations-when-giving-feedback",
+              "/participants/peer-feedback/getting-started/find-your-surveys-participation-link",
+              "/participants/peer-feedback/getting-started/reason-there-is-no-n-a-option",
+              "/participants/peer-feedback/giving-feedback/change-your-answers-after-youve-sent-the-survey",
+              "/participants/peer-feedback/giving-feedback/survey-participation-requirements",
+              "/participants/peer-feedback/giving-feedback/make-sure-that-your-feedback-is-useful-and-taken-into-account",
+              "/participants/peer-feedback/giving-feedback/survey-participation-eligibility",
+              "/participants/peer-feedback/giving-feedback/importance-of-feedback",
+              "/participants/peer-feedback/results-exports/export-the-results-as-an-excel-file",
+              "/participants/peer-feedback/results-exports/obtain-a-non-anonymous-data-export",
+              "/participants/peer-feedback/results-exports/export-the-results",
+              "/participants/peer-feedback/results-workshops/make-the-meeting-about-the-results-a-success",
+              "/participants/peer-feedback/results-workshops/considerations-when-receiving-feedback",
+              "/participants/peer-feedback/results-workshops/find-material-to-discuss-the-results",
+              "/participants/peer-feedback/scores-and-comparisons/compare-different-surveys-with-each-other",
+              "/participants/peer-feedback/scores-and-comparisons/score-calculation"
+            ]
+          },
+        {
+          "group": "Account & profile",
+          "icon": "key-round",
+          "pages": [
+            "/shared/login/change-your-password",
+            "/shared/login/log-in-to-pulse-feedback",
+            "/shared/login/single-sign-on-sso",
+            "/participants/profile-language/change-the-language-of-the-application",
+            "/participants/profile-language/set-up-your-profile-picture"
+          ]
+        }
+      ]
+    },
+    {
+      "tab": "By task",
+      "icon": "compass",
+      "position": "right",
+      "groups": [
+        {
+          "group": "Getting started",
+          "icon": "book-open",
+          "pages": [
+            "/index",
+            "/participants/team-feedback/index",
+            "/participants/peer-feedback/index",
+            "/admin/managing-surveys/index"
+          ]
+        },
+        {
+          "group": "Setup",
+          "icon": "settings",
+          "pages": [
+            "/admin/managing-surveys/survey-setup/set-up-a-survey",
+            "/admin/managing-surveys/survey-setup/reuse-an-earlier-survey",
+            "/admin/managing-surveys/survey-setup/edit-a-survey-you-set-up-before-it-has-started",
+            "/admin/managing-surveys/question-management/add-your-own-questions",
+            "/admin/managing-surveys/question-management/translation-requirements-for-questions",
+            "/admin/managing-surveys/question-management/add-and-manage-topics",
+            "/admin/managing-surveys/participant-management/import-participants",
+            "/admin/managing-surveys/participant-management/bulk-edit-participants",
+            "/admin/managing-surveys/participant-management/edit-one-or-more-participants-e-g-change-name-team-or-manager",
+            "/admin/managing-surveys/participant-management/assign-a-survey-to-selected-teams-only",
+            "/admin/managing-surveys/participant-management/team-creation-process",
+            "/admin/login-settings/index"
+          ]
+        },
+        {
+          "group": "Launch & delivery",
+          "icon": "send",
+          "pages": [
+            "/admin/managing-surveys/e-mail-einstellungen/create-your-own-invitation-reminder-or-results-emails",
+            "/admin/managing-surveys/e-mail-einstellungen/change-the-text-of-the-invitation-reminder-and-results-emails",
+            "/admin/managing-surveys/e-mail-einstellungen/languages-supported-by-pulse",
+            "/shared/login/log-in-to-pulse-feedback",
+            "/shared/login/single-sign-on-sso",
+            "/shared/login/change-your-password",
+            "/participants/team-feedback/getting-started/find-your-participant-link-for-the-survey",
+            "/participants/peer-feedback/getting-started/find-your-surveys-participation-link"
+          ]
+        },
+        {
+          "group": "Monitor & moderation",
+          "icon": "eye",
+          "pages": [
+            "/admin/managing-surveys/comment-moderation/moderate-reported-comments",
+            "/admin/managing-surveys/comment-moderation/best-way-to-handle-inappropriate-comments",
+            "/participants/team-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
+            "/participants/team-feedback/feedback-visibility-and-teams/team-feedback-visibility",
+            "/participants/peer-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
+            "/participants/peer-feedback/feedback-visibility-and-teams/peer-feedback-visibility",
+            "/participants/peer-feedback/feedback-visibility-and-teams/results-availability-timeline"
+          ]
+        },
+        {
+          "group": "Results & exports",
+          "icon": "bar-chart",
+          "pages": [
+            "/participants/team-feedback/results-visibility/see-the-distribution-of-the-ratings",
+            "/participants/team-feedback/results-exports/export-the-survey-data-in-excel-format",
+            "/participants/team-feedback/results-exports/export-the-results",
+            "/participants/peer-feedback/results-exports/export-the-results",
+            "/participants/peer-feedback/results-exports/export-the-results-as-an-excel-file",
+            "/participants/team-feedback/results-workshops/considerations-to-achieve-a-successful-results-meeting",
+            "/participants/peer-feedback/results-workshops/make-the-meeting-about-the-results-a-success",
+            "/participants/team-feedback/scores-and-comparisons/compare-the-results-from-different-surveys",
+            "/participants/peer-feedback/scores-and-comparisons/compare-different-surveys-with-each-other",
+            "/participants/team-feedback/scores-and-comparisons/score-calculation",
+            "/participants/peer-feedback/scores-and-comparisons/score-calculation"
+          ]
+        },
+        {
+          "group": "Compliance & security",
+          "icon": "shield",
+          "pages": [
+            "/admin/security-privacy/index",
+            "/admin/security-privacy/data-protection/pulse-compliance-with-the-eu-dsgvo",
+            "/admin/security-privacy/data-protection/personal-data-retention",
+            "/admin/security-privacy/security/data-encryption",
+            "/admin/security-privacy/security/pulse-iso-certification"
+          ]
+        }
+      ]
     }
-  }
+  ]
+}
 }
