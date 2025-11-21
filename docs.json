@@ -161,11 +161,11 @@
       {
         "tab": "Participants",
         "icon": "users",
-      "groups": [
-        {
-          "group": "Team feedback",
-          "icon": "users",
-          "pages": [
+        "groups": [
+          {
+            "group": "Team feedback",
+            "icon": "users",
+            "pages": [
               "/participants/team-feedback/index",
               "/participants/team-feedback/comments/filter-the-comments",
               "/participants/team-feedback/comments/like-a-comment",
@@ -238,109 +238,144 @@
               "/participants/peer-feedback/scores-and-comparisons/score-calculation"
             ]
           },
-        {
-          "group": "Account & profile",
-          "icon": "key-round",
-          "pages": [
-            "/shared/login/change-your-password",
-            "/shared/login/log-in-to-pulse-feedback",
-            "/shared/login/single-sign-on-sso",
-            "/participants/profile-language/change-the-language-of-the-application",
-            "/participants/profile-language/set-up-your-profile-picture"
-          ]
-        }
-      ]
-    },
-    {
-      "tab": "By task",
-      "icon": "compass",
-      "position": "right",
-      "groups": [
-        {
-          "group": "Getting started",
-          "icon": "book-open",
-          "pages": [
-            "/index",
-            "/participants/team-feedback/index",
-            "/participants/peer-feedback/index",
-            "/admin/managing-surveys/index"
-          ]
-        },
-        {
-          "group": "Setup",
-          "icon": "settings",
-          "pages": [
-            "/admin/managing-surveys/survey-setup/set-up-a-survey",
-            "/admin/managing-surveys/survey-setup/reuse-an-earlier-survey",
-            "/admin/managing-surveys/survey-setup/edit-a-survey-you-set-up-before-it-has-started",
-            "/admin/managing-surveys/question-management/add-your-own-questions",
-            "/admin/managing-surveys/question-management/translation-requirements-for-questions",
-            "/admin/managing-surveys/question-management/add-and-manage-topics",
-            "/admin/managing-surveys/participant-management/import-participants",
-            "/admin/managing-surveys/participant-management/bulk-edit-participants",
-            "/admin/managing-surveys/participant-management/edit-one-or-more-participants-e-g-change-name-team-or-manager",
-            "/admin/managing-surveys/participant-management/assign-a-survey-to-selected-teams-only",
-            "/admin/managing-surveys/participant-management/team-creation-process",
-            "/admin/login-settings/index"
-          ]
-        },
-        {
-          "group": "Launch & delivery",
-          "icon": "send",
-          "pages": [
-            "/admin/managing-surveys/e-mail-einstellungen/create-your-own-invitation-reminder-or-results-emails",
-            "/admin/managing-surveys/e-mail-einstellungen/change-the-text-of-the-invitation-reminder-and-results-emails",
-            "/admin/managing-surveys/e-mail-einstellungen/languages-supported-by-pulse",
-            "/shared/login/log-in-to-pulse-feedback",
-            "/shared/login/single-sign-on-sso",
-            "/shared/login/change-your-password",
-            "/participants/team-feedback/getting-started/find-your-participant-link-for-the-survey",
-            "/participants/peer-feedback/getting-started/find-your-surveys-participation-link"
-          ]
-        },
-        {
-          "group": "Monitor & moderation",
-          "icon": "eye",
-          "pages": [
-            "/admin/managing-surveys/comment-moderation/moderate-reported-comments",
-            "/admin/managing-surveys/comment-moderation/best-way-to-handle-inappropriate-comments",
-            "/participants/team-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
-            "/participants/team-feedback/feedback-visibility-and-teams/team-feedback-visibility",
-            "/participants/peer-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
-            "/participants/peer-feedback/feedback-visibility-and-teams/peer-feedback-visibility",
-            "/participants/peer-feedback/feedback-visibility-and-teams/results-availability-timeline"
-          ]
-        },
-        {
-          "group": "Results & exports",
-          "icon": "bar-chart",
-          "pages": [
-            "/participants/team-feedback/results-visibility/see-the-distribution-of-the-ratings",
-            "/participants/team-feedback/results-exports/export-the-survey-data-in-excel-format",
-            "/participants/team-feedback/results-exports/export-the-results",
-            "/participants/peer-feedback/results-exports/export-the-results",
-            "/participants/peer-feedback/results-exports/export-the-results-as-an-excel-file",
-            "/participants/team-feedback/results-workshops/considerations-to-achieve-a-successful-results-meeting",
-            "/participants/peer-feedback/results-workshops/make-the-meeting-about-the-results-a-success",
-            "/participants/team-feedback/scores-and-comparisons/compare-the-results-from-different-surveys",
-            "/participants/peer-feedback/scores-and-comparisons/compare-different-surveys-with-each-other",
-            "/participants/team-feedback/scores-and-comparisons/score-calculation",
-            "/participants/peer-feedback/scores-and-comparisons/score-calculation"
-          ]
-        },
-        {
-          "group": "Compliance & security",
-          "icon": "shield",
-          "pages": [
-            "/admin/security-privacy/index",
-            "/admin/security-privacy/data-protection/pulse-compliance-with-the-eu-dsgvo",
-            "/admin/security-privacy/data-protection/personal-data-retention",
-            "/admin/security-privacy/security/data-encryption",
-            "/admin/security-privacy/security/pulse-iso-certification"
-          ]
-        }
-      ]
-    }
-  ]
-}
+          {
+            "group": "Account & profile",
+            "icon": "key-round",
+            "pages": [
+              "/shared/login/change-your-password",
+              "/shared/login/log-in-to-pulse-feedback",
+              "/shared/login/single-sign-on-sso",
+              "/participants/profile-language/change-the-language-of-the-application",
+              "/participants/profile-language/set-up-your-profile-picture"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Getting started",
+        "icon": "book-open",
+        "position": "right",
+        "groups": [
+          {
+            "group": "Getting started",
+            "icon": "book-open",
+            "pages": [
+              "/index",
+              "/participants/team-feedback/index",
+              "/participants/peer-feedback/index",
+              "/admin/managing-surveys/index"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Setup",
+        "icon": "settings",
+        "position": "right",
+        "groups": [
+          {
+            "group": "Setup",
+            "icon": "settings",
+            "pages": [
+              "/admin/managing-surveys/survey-setup/set-up-a-survey",
+              "/admin/managing-surveys/survey-setup/reuse-an-earlier-survey",
+              "/admin/managing-surveys/survey-setup/edit-a-survey-you-set-up-before-it-has-started",
+              "/admin/managing-surveys/question-management/add-your-own-questions",
+              "/admin/managing-surveys/question-management/translation-requirements-for-questions",
+              "/admin/managing-surveys/question-management/add-and-manage-topics",
+              "/admin/managing-surveys/participant-management/import-participants",
+              "/admin/managing-surveys/participant-management/bulk-edit-participants",
+              "/admin/managing-surveys/participant-management/edit-one-or-more-participants-e-g-change-name-team-or-manager",
+              "/admin/managing-surveys/participant-management/assign-a-survey-to-selected-teams-only",
+              "/admin/managing-surveys/participant-management/team-creation-process",
+              "/admin/login-settings/index"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Launch & delivery",
+        "icon": "send",
+        "position": "right",
+        "groups": [
+          {
+            "group": "Launch & delivery",
+            "icon": "send",
+            "pages": [
+              "/admin/managing-surveys/e-mail-einstellungen/create-your-own-invitation-reminder-or-results-emails",
+              "/admin/managing-surveys/e-mail-einstellungen/change-the-text-of-the-invitation-reminder-and-results-emails",
+              "/admin/managing-surveys/e-mail-einstellungen/languages-supported-by-pulse",
+              "/shared/login/log-in-to-pulse-feedback",
+              "/shared/login/single-sign-on-sso",
+              "/shared/login/change-your-password",
+              "/participants/team-feedback/getting-started/find-your-participant-link-for-the-survey",
+              "/participants/peer-feedback/getting-started/find-your-surveys-participation-link"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Monitor & moderation",
+        "icon": "eye",
+        "position": "right",
+        "groups": [
+          {
+            "group": "Monitor & moderation",
+            "icon": "eye",
+            "pages": [
+              "/admin/managing-surveys/comment-moderation/moderate-reported-comments",
+              "/admin/managing-surveys/comment-moderation/best-way-to-handle-inappropriate-comments",
+              "/participants/team-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
+              "/participants/team-feedback/feedback-visibility-and-teams/team-feedback-visibility",
+              "/participants/peer-feedback/feedback-visibility-and-teams/feedback-visibility-timeline",
+              "/participants/peer-feedback/feedback-visibility-and-teams/peer-feedback-visibility",
+              "/participants/peer-feedback/feedback-visibility-and-teams/results-availability-timeline"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Results & exports",
+        "icon": "bar-chart",
+        "position": "right",
+        "groups": [
+          {
+            "group": "Results & exports",
+            "icon": "bar-chart",
+            "pages": [
+              "/participants/team-feedback/results-visibility/see-the-distribution-of-the-ratings",
+              "/participants/team-feedback/results-exports/export-the-survey-data-in-excel-format",
+              "/participants/team-feedback/results-exports/export-the-results",
+              "/participants/peer-feedback/results-exports/export-the-results",
+              "/participants/peer-feedback/results-exports/export-the-results-as-an-excel-file",
+              "/participants/team-feedback/results-workshops/considerations-to-achieve-a-successful-results-meeting",
+              "/participants/peer-feedback/results-workshops/make-the-meeting-about-the-results-a-success",
+              "/participants/team-feedback/scores-and-comparisons/compare-the-results-from-different-surveys",
+              "/participants/peer-feedback/scores-and-comparisons/compare-different-surveys-with-each-other",
+              "/participants/team-feedback/scores-and-comparisons/score-calculation",
+              "/participants/peer-feedback/scores-and-comparisons/score-calculation"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Compliance & security",
+        "icon": "shield",
+        "position": "right",
+        "groups": [
+          {
+            "group": "Compliance & security",
+            "icon": "shield",
+            "pages": [
+              "/admin/security-privacy/index",
+              "/admin/security-privacy/data-protection/pulse-compliance-with-the-eu-dsgvo",
+              "/admin/security-privacy/data-protection/personal-data-retention",
+              "/admin/security-privacy/security/data-encryption",
+              "/admin/security-privacy/security/pulse-iso-certification"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
